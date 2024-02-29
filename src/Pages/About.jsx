@@ -16,34 +16,44 @@ const About = () => {
           We also engage in distribution of Platinum karaoke products.
         </Typography>
       </div>
-      <div className="flex flex-col p-16 gap-16 w-8/12 justify-center items-center mx-auto">
-        <div className="flex flex-col lg:flex-row justify-center items-center gap-8 p-4">
-          <img className="w-5/12" src="/KaraokeDivision.jpg" alt="" />
-          <div className="flex flex-col justify-between">
-            <Typography className="text-3xl mb-8 font-bold" as="text">
-              Karaoke Division
-            </Typography>
-            <Typography as="text">
-              In 2010, Vismay International Corporation started distributing
-              Platinum Karaoke and introduced a collection of karaoke players
-              with latest technology. This piloted a new era in the
-              entertainment industry with Karaoke systems becoming a must in
-              every Filipino Household.
-            </Typography>
+      <div className="container mx-auto">
+        <div className="flex flex-col  lg:p-16 gap-16 w-8/12 justify-center items-center mx-auto">
+          <div className="flex flex-col lg:flex-row justify-center items-center lg:gap-8 lg:p-4">
+            <img
+              className="my-8 lg:my-0 lg:w-5/12 order-2 lg:order-1"
+              src="/KaraokeDivision.jpg"
+              alt=""
+            />
+            <div className="flex flex-col justify-between order-1 lg:order-2 lg:mt-0 mt-8">
+              <Typography className="text-3xl mb-8 font-bold" as="text">
+                Karaoke Division
+              </Typography>
+              <Typography as="text">
+                In 2010, Vismay International Corporation started distributing
+                Platinum Karaoke and introduced a collection of karaoke players
+                with latest technology. This piloted a new era in the
+                entertainment industry with Karaoke systems becoming a must in
+                every Filipino Household.
+              </Typography>
+            </div>
           </div>
-        </div>
-        <div className="flex flex-col lg:flex-row justify-center items-center gap-8 p-4">
-          <div>
-            <Typography as="text" className="text-3xl mb-8 font-bold">
-              Electronics Division
-            </Typography>
-            <Typography as="text">
-              Vismay is an authorized distributor for prestigious brands of
-              electronic products such as Symphony air cooler, strontium SD
-              card, Mifa Bluetooth speaker, Adidas mobile cases etc.
-            </Typography>
+          <div className="flex flex-col lg:flex-row justify-center items-center lg:gap-8 lg:p-4">
+            <div>
+              <Typography as="text" className="text-3xl mb-8 font-bold">
+                Electronics Division
+              </Typography>
+              <Typography as="text">
+                Vismay is an authorized distributor for prestigious brands of
+                electronic products such as Symphony air cooler, strontium SD
+                card, Mifa Bluetooth speaker, Adidas mobile cases etc.
+              </Typography>
+            </div>
+            <img
+              className="my-8 lg:my-0 lg:w-5/12"
+              src="/ElectronicsDivision.jpg"
+              alt=""
+            />
           </div>
-          <img className="w-5/12" src="/ElectronicsDivision.jpg" alt="" />
         </div>
       </div>
     </section>

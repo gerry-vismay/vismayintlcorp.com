@@ -7,9 +7,9 @@ const MissionVision = () => {
         <h1 className="text-center text-3xl">Mission, Vision and Objects</h1>
       </div>
 
-      <div className="p-32 bg-deep-orange-100 flex flex-col lg:flex-row gap-12 justify-center ">
-        <div className="bg-blue-900 text-white w-[400px] text-center flex flex-col justify-between overflow-y-hidden">
-          <div className="-translate-y-full hover:-translate-y-0 transition-translate duration-500 bg-blue-700 p-8 ">
+      <div className="p-32 bg-deep-orange-100 flex flex-col lg:flex-row gap-12 justify-center items-center lg:items-normal ">
+        <div className="bg-blue-900 text-white w-[400px] text-center flex flex-col justify-between ">
+          <div className=" p-8 ">
             <p>
               To be the leader in providing top-of-the-line karaoke products
               with excellent quality at a reasonable price along with quality
@@ -20,8 +20,8 @@ const MissionVision = () => {
             <h2>Mission</h2>
           </div>
         </div>
-        <div className="bg-blue-900 text-white  w-[400px] text-center flex flex-col justify-between overflow-y-hidden">
-          <div className="-translate-y-full hover:-translate-y-0 transition-translate duration-500 bg-blue-700 p-8">
+        <div className="bg-blue-900 text-white  w-[400px] text-center flex flex-col justify-between ">
+          <div className=" p-8">
             <p>
               Setting up a similar karaoke distribution channel that we have in
               the Philippines in other countries.
@@ -37,7 +37,7 @@ const MissionVision = () => {
           <p className="text-3xl ">Objectives</p>
           <div className="h-1 w-20 bg-blue-900 rounded-md my-16"></div>
           <div>
-            <div className="grid grid-cols-2 gap-8 px-20">
+            <div className="grid grid-cols-1 lg:grid-cols-2  gap-8 px-8 lg:px-20">
               <p>
                 To provide top-of-the-line karaoke products to customers along
                 with after sales services that ensure customer satisfaction.

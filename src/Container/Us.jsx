@@ -23,8 +23,8 @@ const Us = () => {
 
   return (
     <div className="flex flex-col justify-center items-center my-24 gap-4 cursor-pointer">
-      <h1 className="text-xl lg:text-4xl p-4">Who We Are</h1>
-      <div className="flex flex-col lg:flex-row  gap-4 lg:gap-12">
+      <h1 className="text-2xl lg:text-4xl p-4">Who We Are</h1>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-4 lg:gap-12">
         <img
           aria-describedby={id}
           onClick={handleClick}

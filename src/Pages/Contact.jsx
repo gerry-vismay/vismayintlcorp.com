@@ -6,10 +6,10 @@ const Contact = () => {
       <div className="p-20 bg-gray-100">
         <h1 className="text-center text-3xl">Contact Us</h1>
       </div>
-      <div className="container mx-auto max-w-screen-2xl mt-16">
+      <div className="container mx-auto  mt-16">
         <div className="flex flex-wrap justify-around items-center">
           <div className="w-1/2">
-            <p className=" text-3xl font-bold">
+            <p className="text-3xl font-bold">
               Vismay International Corporation
             </p>
             <div className="h-1 w-20 bg-blue-900 rounded-md my-16"></div>
@@ -20,7 +20,7 @@ const Contact = () => {
               to their doorstep and ensuring product quality and authenticity.
             </p>
           </div>
-          <div className="size-96">
+          <div className="size-96 lg:mt-0 mt-16 px-6 lg:px-0">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3862.588248716302!2d121.03889437510432!3d14.508310885967164!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397cf7ce9c44f21%3A0x907a63ce7939f0f!2sVismay%20International%20Corporation!5e0!3m2!1sen!2sph!4v1709173805427!5m2!1sen!2sph"
               style={{
@@ -35,7 +35,7 @@ const Contact = () => {
             ></iframe>
           </div>
         </div>
-        <div className="mt-16">
+        <div className="lg:mt-16 mt-8 px-6 lg:px-0">
           <div className="max-w-screen-xl">
             <p className="text-3xl font-bold">Platinum Karaoke</p>
             <div className="h-1 w-20 bg-blue-900 rounded-md my-16"></div>

@@ -40,7 +40,12 @@ const NavBar = () => {
           About Us
         </a>
       </Typography>
-      <Typography>
+      <Typography
+        as="li"
+        variant="small"
+        color="blue-gray"
+        className="p-1 font-normal"
+      >
         <a href="/career" className="flex items-center">
           Careers
         </a>
