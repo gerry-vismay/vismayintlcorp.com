@@ -18,7 +18,7 @@ const Updates = () => {
         <h1 className="text-center text-3xl">News and Events</h1>
       </div>
 
-      <div>
+      <div className="container mx-auto p-8">
         <Accordion
           expanded={expanded === "panel1"}
           onChange={handleChange("panel1")}
@@ -29,7 +29,7 @@ const Updates = () => {
             id="panel1bh-header"
           >
             <Typography sx={{ width: "33%", flexShrink: 0 }}>
-              General Settings
+              10 best photos of 2024 Year-End Party
             </Typography>
           </AccordionSummary>
           <AccordionDetails>

@@ -25,7 +25,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/career" element={<Career />} />
           <Route path="/mission&vision" element={<MissionVision />} />
-          <Route path="/news&updates" element={<Updates />} />
+          <Route path="/news&events" element={<Updates />} />
           <Route path="/organizationalchart" element={<Organizational />} />
           <Route path="/brands" element={<Brands />} />
           <Route path="/partners" element={<Partners />} />
