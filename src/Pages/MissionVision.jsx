@@ -32,34 +32,36 @@ const MissionVision = () => {
           </div>
         </div>
       </div>
-      <div>
-        <p>Objectives</p>
-        <div></div>
-        <div>
+      <div className="container mx-auto">
+        <div className="flex flex-col justify-center my-16 items-center">
+          <p className="text-3xl ">Objectives</p>
+          <div className="h-1 w-20 bg-blue-900 rounded-md my-16"></div>
           <div>
-            <p>
-              To provide top-of-the-line karaoke products to customers along
-              with after sales services that ensure customer satisfaction.
-            </p>
-            <p>
-              To be the market leader in distribution of electronic products and
-              karaoke entertainment tools.
-            </p>
-            <p>
-              To provide technologically advanced and economical karaoke
-              products that cater to a wide range of customers.
-            </p>
-          </div>
-          <div>
-            <p>
-              To expand distribution of Platinum karaoke to other regions and to
-              make Platinum karaoke available in every household across
-              countries.
-            </p>
-            <p>
-              To achieve profit and company growth and to ensure that all other
-              values and objectives are adhered.
-            </p>
+            <div className="grid grid-cols-2 gap-8 px-20">
+              <p>
+                To provide top-of-the-line karaoke products to customers along
+                with after sales services that ensure customer satisfaction.
+              </p>
+              <p>
+                To be the market leader in distribution of electronic products
+                and karaoke entertainment tools.
+              </p>
+              <p>
+                To provide technologically advanced and economical karaoke
+                products that cater to a wide range of customers.
+              </p>
+              {/* </div>
+            <div> */}
+              <p>
+                To expand distribution of Platinum karaoke to other regions and
+                to make Platinum karaoke available in every household across
+                countries.
+              </p>
+              <p>
+                To achieve profit and company growth and to ensure that all
+                other values and objectives are adhered.
+              </p>
+            </div>
           </div>
         </div>
       </div>
