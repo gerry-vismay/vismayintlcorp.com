@@ -24,28 +24,40 @@ const Us = () => {
   return (
     <div className="flex flex-col justify-center items-center my-24 gap-4 cursor-pointer">
       <h1 className="text-2xl lg:text-4xl p-4">Who We Are</h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-4 lg:gap-12">
-        <img
-          aria-describedby={id}
-          onClick={handleClick}
-          className="border-2 border-black p-4 rounded-2xl"
-          src="/thePlatinum.png"
-          alt=""
-        />
-        <img
-          aria-describedby={id}
-          onClick={handleClick}
-          className="border-2 border-black p-4 rounded-2xl"
-          src="/symphony.png"
-          alt=""
-        />
-        <img
-          aria-describedby={id}
-          onClick={handleClick}
-          className="border-2 border-black p-4 rounded-2xl"
-          src="/strontium.jpg"
-          alt=""
-        />
+      <div className="container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  items-center gap-4 lg:gap-16">
+        <div className="p-2">
+          <a href="https://platinumkaraoke.com/">
+            <img
+              aria-describedby={id}
+              // onClick={handleClick}
+              className=""
+              src="/platinumLogo.png"
+              alt=""
+            />
+          </a>
+        </div>
+        <div className="p-2 ">
+          <a href="https://gamextreme.ph/">
+            <img
+              aria-describedby={id}
+              // onClick={handleClick}
+              className=""
+              src="/gxBlack.png"
+              alt=""
+            />
+          </a>
+        </div>
+        <div className=" p-2">
+          <a href="https://laifen.ph/">
+            <img
+              aria-describedby={id}
+              // onClick={handleClick}
+              className=""
+              src="/laifenBlack.png"
+              alt=""
+            />
+          </a>
+        </div>
         <Popover
           id={id}
           open={open}

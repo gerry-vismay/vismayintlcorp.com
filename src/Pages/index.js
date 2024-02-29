@@ -4,3 +4,5 @@ export { default as Contact } from "./Contact";
 export { default as MissionVision } from "./MissionVision";
 export { default as Organizational } from "./Organizational";
 export { default as Updates } from "./Updates";
+export { default as Brands } from "./Brands";
+export { default as Partners } from "./Partners";

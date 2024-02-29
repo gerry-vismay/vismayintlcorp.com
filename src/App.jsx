@@ -5,10 +5,12 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import {
   About,
+  Brands,
   Career,
   Contact,
   MissionVision,
   Organizational,
+  Partners,
   Updates,
 } from "./Pages/index";
 import Footer from "./Components/Footer";
@@ -25,6 +27,8 @@ function App() {
           <Route path="/mission&vision" element={<MissionVision />} />
           <Route path="/news&updates" element={<Updates />} />
           <Route path="/organizationalchart" element={<Organizational />} />
+          <Route path="/brands" element={<Brands />} />
+          <Route path="/partners" element={<Partners />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
         <Footer />

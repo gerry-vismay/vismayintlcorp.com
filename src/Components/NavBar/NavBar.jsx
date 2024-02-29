@@ -50,14 +50,15 @@ const NavBar = () => {
           Careers
         </a>
       </Typography>
+
       <Typography
         as="li"
         variant="small"
         color="blue-gray"
         className="p-1 font-normal"
       >
-        <a href="/mission&vision" className="flex items-center">
-          Mission & Vision
+        <a href="/news&events" className="flex items-center">
+          News & Events
         </a>
       </Typography>
       <Typography
@@ -66,8 +67,8 @@ const NavBar = () => {
         color="blue-gray"
         className="p-1 font-normal"
       >
-        <a href="/news&updates" className="flex items-center">
-          News & Updates
+        <a href="/brands" className="flex items-center">
+          Brands
         </a>
       </Typography>
       <Typography
@@ -76,8 +77,8 @@ const NavBar = () => {
         color="blue-gray"
         className="p-1 font-normal"
       >
-        <a href="/organizationalchart" className="flex items-center">
-          Organizational Chart
+        <a href="/partners" className="flex items-center">
+          Industry Partners
         </a>
       </Typography>
       <Typography
@@ -102,7 +103,7 @@ const NavBar = () => {
             href="/"
             className="mr-4 cursor-pointer py-1.5 font-medium"
           >
-            Vismay International Corporation
+            <img className="w-52" src="/vismayLogo.png" alt="" />
           </Typography>
           <div className="flex items-center gap-4">
             <div className="mr-4 hidden lg:block">{navList}</div>
