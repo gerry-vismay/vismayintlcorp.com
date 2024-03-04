@@ -70,9 +70,18 @@ const Banner = () => {
         </IconButton>
       )}
     >
+      <img
+        src="/vismaybanner.jpg"
+        alt=""
+        className="h-full w-full object-cover"
+      />
       <img src="/pkbanner.jpg" alt="" className="h-full w-full object-cover" />
-      {/* <img src="/banner2.jpg" alt="" className="h-full w-full object-cover" />
-      <img src="/banner1.jpg" alt="" className="h-full w-full object-cover" /> */}
+      <img src="/gxbanner.png" alt="" className="h-full w-full object-cover" />
+      <img
+        src="/laifenbanner.png"
+        alt=""
+        className="h-full w-full object-cover"
+      />
     </Carousel>
   );
 };

@@ -14,11 +14,12 @@ const Updates = () => {
 
   return (
     <section>
-      <div className="p-20 bg-gray-100">
-        <h1 className="text-center text-3xl">News and Events</h1>
+      <div className="h-screen bg-[url('/vismayBG.jpg')] bg-center bg-no-repeat">
+        <div className="p-20 bg-gray-100">
+          <h1 className="text-center text-3xl">News and Events</h1>
+        </div>
       </div>
-
-      <div className="container mx-auto p-8">
+      {/* <div className="container mx-auto p-8">
         <Accordion
           expanded={expanded === "panel1"}
           onChange={handleChange("panel1")}
@@ -59,7 +60,7 @@ const Updates = () => {
             </Typography>
           </AccordionDetails>
         </Accordion>
-      </div>
+      </div> */}
     </section>
   );
 };
