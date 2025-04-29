@@ -1,7 +1,7 @@
 import React from "react";
 
 const WhoWeAre = ({ img, title, description, color, className = "" }) => {
-  const pathIcons = "./assets/icons";
+  // const pathIcons = "./assets/icons";
   let titleColor = "";
   if (color === "red") {
     titleColor = "text-red-500";
@@ -13,7 +13,7 @@ const WhoWeAre = ({ img, title, description, color, className = "" }) => {
   return (
     <div className={`text-center w-[626px] pt-12 ${className} `}>
       <img
-        src={`${pathIcons}/${img}.png`}
+        src={`/icons/${img}.png`}
         alt={`${title} icon`}
         className="w-[80px] mx-auto"
       />
