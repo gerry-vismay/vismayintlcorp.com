@@ -8,6 +8,7 @@ const Card = ({
   titleLeft,
   descriptionLeft,
 }) => {
+  const homePath = "/home";
   return (
     <div className="mt-[50px] text-sm mx-auto flex justify-center flex-col">
       <div className="flex flex-col items-center lg:flex-row max-w-screen-lg mx-auto lg:gap-20 py-6">
@@ -16,7 +17,7 @@ const Card = ({
           <p className="text-xs md:text-sm leading-7">{descriptionRight}</p>
         </div>
         <img
-          src={`./src/assets/img/home/${imgRight}.png`}
+          src={imgRight}
           className="order-1 lg:order-none w-[330px]"
           alt={`${titleRight}`}
         />
@@ -24,7 +25,7 @@ const Card = ({
 
       <div className="flex flex-col items-center lg:flex-row max-w-screen-lg lg:mx-auto lg:gap-20 py-6">
         <img
-          src={`./src/assets/img/home/${imgLeft}.png`}
+          src={imgLeft}
           className="order-1 lg:order-none w-[330px]"
           alt={`${titleLeft}`}
         />

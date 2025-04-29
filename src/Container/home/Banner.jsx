@@ -1,8 +1,6 @@
 import React from "react";
-import desktopImage from "../../assets/img/desktop-banner/webbanner.png";
-import mobileImage from "../../assets/img/mobile-banner/mobile-banner.png";
 
-const Banner = ({ className = "" }) => {
+const Banner = ({ desktopImage, mobileImage, className = "" }) => {
   return (
     <div className={`${className}`}>
       <a href="/">
