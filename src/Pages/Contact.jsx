@@ -1,6 +1,56 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import emailjs from "emailjs-com";
 
 const Contact = () => {
+  const [formData, setFormData] = useState({
+    firstname: "",
+    lastname: "",
+    email: "",
+    jobtitle: "",
+    phone: "",
+    message: "",
+  });
+
+  const [sent, setSent] = useState(false);
+  const [error, setError] = useState("");
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .send(
+        "service_bkumtmv",
+        "template_t9adb01",
+        formData,
+        "xXsOPEA8qL1jao7Rr"
+      )
+      .then(
+        (result) => {
+          console.log("Email sent", result.text);
+          setSent(true);
+          setFormData({
+            firstname: "",
+            lastname: "",
+            email: "",
+            jobtitle: "",
+            phone: "",
+            message: "",
+          });
+        },
+        (error) => {
+          console.error("Error sending email:", error.text);
+          setError("Something went wrong. Please try again.");
+        }
+      );
+
+    setTimeout(() => {
+      window.location.reload(); // reload the page
+    }, 10000); // 10 seconds
+  };
   return (
     <section className="max-w-screen-2xl mx-auto py-24">
       <h1 className="text-center font-bold text-5xl mb-10">
@@ -12,59 +62,88 @@ const Contact = () => {
           <p className="mb-10 text-xl">
             Give us some info so the right person can get back to you
           </p>
-          <form action="" className="flex flex-col gap-y-10">
-            <div className="flex gap-5 text-xl">
-              <input
-                type="text"
-                name="firstName"
-                id="first-name"
-                placeholder="First Name"
-                className="border border-black px-4 py-2 grow"
-              />
-              <input
-                type="text"
-                name="lastName"
-                id="last-name"
-                className="border border-black px-4 py-2 grow"
-                placeholder="Last Name"
-              />
+
+          {sent ? (
+            <div>
+              <p className="text-green-600">Your request has been sent!</p>
+              <p>Page will reload after 10 seconds...</p>
             </div>
-            <input
-              type="email"
-              name="email"
-              id="email"
-              placeholder="Email Address"
-              className="border border-black px-4 py-2"
-            />
-            <input
-              type="text"
-              name="jobTitle"
-              id="job-title"
-              placeholder="Job Title"
-              className="border border-black px-4 py-2"
-            />
-            <input
-              type="text"
-              name="mobileNumber"
-              id="mobile-number"
-              placeholder="Phone"
-              className="border border-black px-4 py-2"
-            />
-            <textarea
-              name="comment"
-              id="comment"
-              placeholder="Comment"
-              className="border border-black px-4 py-2"
+          ) : (
+            <form
+              onSubmit={handleSubmit}
+              className="space-y-4 flex flex-col gap-y-10 text-xl"
             >
-              {" "}
-            </textarea>
-            <button
-              className="bg-[#07549C] text-white text-2xl py-3"
-              type="submit"
-            >
-              SEND
-            </button>
-          </form>
+              <div className="flex gap-5 ">
+                <input
+                  type="text"
+                  name="firstname"
+                  id="first-name"
+                  placeholder="First Name"
+                  className="border border-black px-4 py-2 grow"
+                  value={formData.firstname}
+                  onChange={handleChange}
+                  required
+                />
+                <input
+                  type="text"
+                  name="lastname"
+                  id="last-name"
+                  className="border border-black px-4 py-2 grow"
+                  placeholder="Last Name"
+                  value={formData.lastname}
+                  onChange={handleChange}
+                  required
+                />
+              </div>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="Email Address"
+                className="border border-black px-4 py-2"
+                value={formData.email}
+                onChange={handleChange}
+                required
+              />
+              <input
+                type="text"
+                name="jobtitle"
+                id="job-title"
+                placeholder="Job Title"
+                className="border border-black px-4 py-2"
+                value={formData.jobtitle}
+                onChange={handleChange}
+                required
+              />
+              <input
+                type="text"
+                name="phone"
+                id="mobile-number"
+                placeholder="Phone"
+                className="border border-black px-4 py-2"
+                value={formData.phone}
+                onChange={handleChange}
+                required
+              />
+              <textarea
+                name="message"
+                id="message"
+                placeholder="Your Message (Optional)"
+                className="border border-black px-4 py-2"
+                value={formData.message}
+                onChange={handleChange}
+                required
+              />
+
+              <button
+                type="submit"
+                className="w-full bg-[#07549C] text-white py-2 px-4 rounded hover:bg-blue-600"
+              >
+                Send
+              </button>
+              {error && <p className="text-red-500 text-sm">{error}</p>}
+            </form>
+          )}
         </div>
         <div className="flex flex-col gap-14">
           <div className="bg-gray-200 px-8 py-10 rounded-lg">

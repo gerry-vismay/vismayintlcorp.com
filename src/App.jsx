@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import { WhoWeAre, Brands, Career, Contact } from "./Pages/index";
 import Footer from "./Components/Footer";
+import ChatWidget from "./chat/ChatWidget";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         </Routes>
         <Footer />
       </Router>
+      {/* <ChatWidget /> */}
     </>
   );
 }
