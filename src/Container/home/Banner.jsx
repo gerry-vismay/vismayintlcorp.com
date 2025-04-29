@@ -1,5 +1,6 @@
 import React from "react";
-import TButton from "../../Components/buttons/TButton";
+import desktopImage from "../../assets/img/desktop-banner/webbanner.png";
+import mobileImage from "../../assets/img/mobile-banner/mobile-banner.png";
 
 const Banner = ({ className = "" }) => {
   return (
@@ -7,14 +8,14 @@ const Banner = ({ className = "" }) => {
       <a href="/">
         <div className="lg:block hidden ">
           <img
-            src=".\src\assets\img\desktop-banner\webbanner.png"
+            src={desktopImage}
             alt=""
             className={`h-full w-full object-cover  `}
           />
         </div>
         <div className="lg:hidden block ">
           <img
-            src=".\src\assets\img\mobile-banner\mobile-banner.png"
+            src={mobileImage}
             alt=""
             className={`h-full w-full object-cover `}
           />
