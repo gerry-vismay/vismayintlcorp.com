@@ -1,4 +1,5 @@
 import React from "react";
+import logo from "../../assets/vismayLogo.png";
 
 import {
   Navbar,
@@ -84,11 +85,7 @@ const NavBar = () => {
             href="/"
             className="mr-4 cursor-pointer py-1.5 font-medium"
           >
-            <img
-              className="w-40 lg:w-[303px] lg:h-[140px]"
-              src="./src/assets/vismayLogo.png"
-              alt=""
-            />
+            <img className="w-40 lg:w-[303px] lg:h-[140px]" src={logo} alt="" />
           </Typography>
           <div className="flex items-center gap-4">
             <div className="mr-4 hidden xl:block">{navList}</div>
