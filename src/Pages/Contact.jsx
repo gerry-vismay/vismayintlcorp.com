@@ -2,56 +2,95 @@ import React from "react";
 
 const Contact = () => {
   return (
-    <section>
-      <div className="p-20 bg-gray-100">
-        <h1 className="text-center text-3xl">Contact Us</h1>
-      </div>
-      <div className="container mx-auto  mt-16">
-        <div className="flex flex-wrap justify-around items-center">
-          <div className="w-1/2">
-            <p className="text-3xl font-bold">
-              Vismay International Corporation
-            </p>
-            <div className="h-1 w-20 bg-blue-900 rounded-md my-16"></div>
-            <p className="text-sm">
-              Vismay International Corporation is engaged in distribution of the
-              latest technology and trends from different parts of the globe to
-              the Philippines. We cater to the needs of every individual right
-              to their doorstep and ensuring product quality and authenticity.
-            </p>
-          </div>
-          <div className="size-96 lg:mt-0 mt-16 px-6 lg:px-0">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3862.588248716302!2d121.03889437510432!3d14.508310885967164!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397cf7ce9c44f21%3A0x907a63ce7939f0f!2sVismay%20International%20Corporation!5e0!3m2!1sen!2sph!4v1709173805427!5m2!1sen!2sph"
-              style={{
-                border: "0",
-                width: "100%",
-                height: "100%",
-                borderRadius: "10px",
-              }}
-              allowFullScreen
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-            ></iframe>
-          </div>
+    <section className="max-w-screen-2xl mx-auto py-24">
+      <h1 className="text-center font-bold text-5xl mb-10">
+        How would you like to contact us?
+      </h1>
+      <div className="flex justify-between gap-16 ">
+        <div className="bg-gray-200 px-8 py-4 rounded-lg">
+          <h2 className="text-3xl font-semibold">Request a call</h2>
+          <p className="mb-10 text-xl">
+            Give us some info so the right person can get back to you
+          </p>
+          <form action="" className="flex flex-col gap-y-10">
+            <div className="flex gap-5 text-xl">
+              <input
+                type="text"
+                name="firstName"
+                id="first-name"
+                placeholder="First Name"
+                className="border border-black px-4 py-2 grow"
+              />
+              <input
+                type="text"
+                name="lastName"
+                id="last-name"
+                className="border border-black px-4 py-2 grow"
+                placeholder="Last Name"
+              />
+            </div>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Email Address"
+              className="border border-black px-4 py-2"
+            />
+            <input
+              type="text"
+              name="jobTitle"
+              id="job-title"
+              placeholder="Job Title"
+              className="border border-black px-4 py-2"
+            />
+            <input
+              type="text"
+              name="mobileNumber"
+              id="mobile-number"
+              placeholder="Phone"
+              className="border border-black px-4 py-2"
+            />
+            <textarea
+              name="comment"
+              id="comment"
+              placeholder="Comment"
+              className="border border-black px-4 py-2"
+            >
+              {" "}
+            </textarea>
+            <button
+              className="bg-[#07549C] text-white text-2xl py-3"
+              type="submit"
+            >
+              SEND
+            </button>
+          </form>
         </div>
-        <div className="lg:mt-16 mt-8 px-6 lg:px-0">
-          <div className="max-w-screen-xl">
-            <p className="text-3xl font-bold">Platinum Karaoke</p>
-            <div className="h-1 w-20 bg-blue-900 rounded-md my-16"></div>
-            <p className="text-sm">
-              The Platinum Karaoke systems are easy to use right out of the box.
-              Plug, play, and then rock the stage! Loaded with convenient
-              features, such as dual microphone jacks to support duets, your
-              special karaoke moment can be much better singing along with a
-              friend. With an awesome song library consisting of thousands of
-              songs for all ages and all talent levels, anyone can have a blast!
+        <div className="flex flex-col gap-14">
+          <div className="bg-gray-200 px-8 py-10 rounded-lg">
+            <h2 className="text-3xl">Chat With Us</h2>
+            <p className="text-xl mb-14 mt-4">
+              Get product info, login help, and live chat with agent.
             </p>
-            <a href="https://www.platinumkaraoke.com/pages/our-stores">
-              <button className="py-4 px-12 rounded-xl bg-gray-400 text-white my-12 hover:bg-black transition-bg duration-300 ">
-                Our Stores
-              </button>
-            </a>
+            <button
+              className="bg-[#07549C] text-white text-2xl py-2 px-16"
+              type="submit"
+            >
+              Let's Chat
+            </button>
+          </div>
+
+          <div className="bg-gray-200 px-8 py-10 rounded-lg">
+            <h2 className="text-3xl">Leave us some feedback</h2>
+            <p className="text-xl mb-14 mt-4">
+              Good or bad, we love to hear it all.
+            </p>
+            <button
+              className="bg-[#07549C] text-white text-2xl py-2 px-16"
+              type="submit"
+            >
+              Send Feedback
+            </button>
           </div>
         </div>
       </div>
