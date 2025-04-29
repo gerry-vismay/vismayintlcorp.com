@@ -1,7 +1,7 @@
 import React from "react";
 
 const WhoWeAre = ({ img, title, description, color, className = "" }) => {
-  const pathIcons = "./src/assets/icons";
+  const pathIcons = "./assets/icons";
   let titleColor = "";
   if (color === "red") {
     titleColor = "text-red-500";
