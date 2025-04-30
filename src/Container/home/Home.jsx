@@ -58,7 +58,7 @@ const Home = () => {
       />
 
       <div className="flex justify-center py-8">
-        <TButton label="Who We Are" href="#" />
+        <TButton label="Who We Are" href="/whoweare" />
       </div>
     </main>
   );
