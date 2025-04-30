@@ -2,27 +2,23 @@ import React from "react";
 import logo from "../assets/vismayLogo.png";
 import DPO from "../assets/footer/SPC-DPO-DPS-Seal-of-Registration-2025-1438x1438-1-1024x1024.png";
 import fbIcon from "../assets/footer/facebook icon.png";
-import igIcon from "../assets/footer/instagram icon.png";
-import tiktokIcon from "../assets/footer/tiktok icon.png";
-import xIcon from "../assets/footer/x icon.png";
+import inIcon from "../assets/footer/LinkedIn icon.png";
 
 // let iconPath = "./src/assets/icons/footer";
 
 const Footer = () => {
   return (
-    <footer className=" shadow shadow-gray-700 lg:flex lg:justify-around lg:items-center py-7 bg-[#D9D9D9]">
+    <footer className="shadow shadow-gray-700 flex flex-col items-center gap-10 lg:flex-row lg:justify-around lg:items-center py-7 bg-[#D9D9D9]">
       <img
         src={logo}
         alt="Vismay International Corporation Logo"
         className="w-60"
       />
-      <div className="border-l-2 border-black pl-4">
+      <div className="lg:border-l-2 border-black pl-4">
         <p className="text-xl uppercase pb-3">Connect WIth Us</p>
-        <div className="w-[30px] flex flex-row gap-6">
+        <div className="w-[45px] flex flex-row gap-6">
           <img src={fbIcon} alt="facebook icon" />
-          <img src={igIcon} alt="instagram icon" />
-          <img src={tiktokIcon} alt="tiktok icon" />
-          <img src={xIcon} alt="x or Twitter icon" />
+          <img src={inIcon} alt="instagram icon" />
         </div>
       </div>
 
@@ -34,9 +30,9 @@ const Footer = () => {
 
       <div className="lg:flex lg:flex-row ">
         <img className="w-[186px]" src={DPO} alt="DPO-DPS data privacy" />
-        <div>
+        <div className="text-center lg:text-left lg:mt-8">
           <p>Read our</p>
-          <p>Privacy Statement</p>
+          <p className="font-bold">Privacy Statement</p>
         </div>
       </div>
     </footer>

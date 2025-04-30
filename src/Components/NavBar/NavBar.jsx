@@ -79,13 +79,13 @@ const NavBar = () => {
   return (
     <div className="max-h-[150px] w-full ">
       <Navbar className="sticky py-0 bg-[#D9D9D9] top-0 z-10 h-max max-w-full rounded-none px-4">
-        <div className="flex items-center justify-between px-16 text-blue-gray-900">
+        <div className="flex items-center justify-between xl:px-16 px-4 text-blue-gray-900">
           <Typography
             as="a"
             href="/"
             className="mr-4 cursor-pointer py-1.5 font-medium"
           >
-            <img className="w-40 lg:w-[303px] lg:h-[140px]" src={logo} alt="" />
+            <img className="w-40 lg:w-[259px] lg:h-[120px]" src={logo} alt="" />
           </Typography>
           <div className="flex items-center gap-4">
             <div className="mr-4 hidden xl:block">{navList}</div>

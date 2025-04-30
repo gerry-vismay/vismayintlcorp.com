@@ -22,14 +22,14 @@ const Brands = () => {
       />
 
       <StaticBanner
-        link="#"
+        link="/ourbrands/platinumkaraoke"
         desktopImage={desktopImgPK}
         mobileImg={mobileImgPK}
         label="Platinum karaoke"
       />
 
       <StaticBanner
-        link="#"
+        link="/ourbrands/laifen"
         desktopImage={desktopImgLF}
         mobileImg={mobileImgLF}
         label="Laifen"

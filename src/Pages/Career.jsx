@@ -11,13 +11,7 @@ import { careers } from "../data/data.js";
 const Career = () => {
   return (
     <section>
-      <div className=" relative inline-block">
-        <Banner desktopImage={careerImg} mobileImage={careerMobile} />
-        <p className="uppercase text-5xl font-bold absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white drop-shadow-md">
-          careers
-        </p>
-      </div>
-      <div className="lg:hidden block"></div>
+      <Banner desktopImage={careerImg} mobileImage={careerMobile} />
 
       <div className="text-center py-16">
         <p className="uppercase text-5xl font-bold">join our growing team</p>
@@ -33,10 +27,6 @@ const Career = () => {
               />
             );
           })}
-          {/* <CareerCard img="career1" department="HR" openJobs={4} />
-          <CareerCard img="career2" department="Marketing" openJobs={4} />
-          <CareerCard img="career3" department="CSR" openJobs={4} />
-          <CareerCard img="career4" department="Accounting" openJobs={4} /> */}
         </div>
       </div>
     </section>
