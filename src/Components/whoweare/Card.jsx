@@ -11,7 +11,7 @@ const WhoWeAre = ({ img, title, description, color, className = "" }) => {
     titleColor = "text-black";
   }
   return (
-    <div className={`text-center w-[626px] pt-12 ${className} `}>
+    <div className={`text-center w-full pt-12 ${className} `}>
       <img src={img} alt={`${title} icon`} className="w-[80px] mx-auto" />
       <div>
         <h3 className={`text-4xl font-bold py-4 ${titleColor}`}>{title}</h3>

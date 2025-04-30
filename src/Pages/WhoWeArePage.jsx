@@ -19,7 +19,7 @@ const WhoWeArePage = () => {
         desktopImage={whoweareIconDesktop}
         mobileImage={whoweareIconMobile}
       />
-      <div className="flex flex-col items-center lg:flex-row lg:justify-between lg:items-center lg:mx-8 lg:gap-8 xl:max-w-screen-xl xl:mx-auto pt-24">
+      <div className="flex flex-col items-center lg:flex-row lg:justify-between lg:items-center mx-8 lg:gap-8 xl:max-w-screen-xl xl:mx-auto pt-24 ">
         <WhoWeAre
           color="blue"
           img={missionIcon}
@@ -34,7 +34,7 @@ const WhoWeArePage = () => {
         />
       </div>
 
-      <div className="text-center w-[626px] pt-12 mx-auto">
+      <div className="text-xs lg:text-base xl:w-[686px] text-center pt-12 mx-auto px-8">
         <img src={whatwedoIcon} alt="what we do" className="w-[80px] mx-auto" />
         <h3 className="text-4xl font-bold py-3 text-[#07549C]">What We Do</h3>
         <p className="text-sm leading-7 pb-12">
