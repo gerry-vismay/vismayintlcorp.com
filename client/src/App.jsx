@@ -5,11 +5,16 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import { WhoWeAre, Brands, Career, Contact } from "./Pages/index";
 import Footer from "./Components/Footer";
+import AdminPage from "../src/Components/admin/AdminPage";
 import ChatWidget from "./chat/ChatWidget";
 import PK from "./Pages/platinumkaraoke/PlatinumKaraokePage";
 import LF from "./Pages/laifen/LaifenPage";
+import Login from "./Components/auth/Login";
+import { useState } from "react";
 
 function App() {
+  const [isLoggedIn, setIsLoggedIn] = useState(!!localStorage.getItem("token"));
+
   return (
     <>
       <Router>
@@ -24,7 +29,19 @@ function App() {
 
           <Route path="/ourbrands/platinumkaraoke" element={<PK />} />
           <Route path="/ourbrands/laifen" element={<LF />} />
+          {/* 🔐 Admin Route */}
+          <Route
+            path="/admin"
+            element={
+              isLoggedIn ? (
+                <AdminPage />
+              ) : (
+                <Login onLogin={() => setIsLoggedIn(true)} />
+              )
+            }
+          />
         </Routes>
+
         <Footer />
       </Router>
       {/* <ChatWidget /> */}
