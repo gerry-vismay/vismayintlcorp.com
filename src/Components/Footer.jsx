@@ -10,26 +10,38 @@ const Footer = () => {
   return (
     <footer className="shadow shadow-gray-700 py-7 bg-[#D9D9D9] px-8">
       <div className="grid grid-cols-1 gap-10 place-items-center  md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 ">
-        <img
-          src={logo}
-          alt="Vismay International Corporation Logo"
-          className="w-60"
-        />
+        <a href="/">
+          <img
+            src={logo}
+            alt="Vismay International Corporation Logo"
+            className="w-60"
+          />
+        </a>
 
         <div className=" xl:h-[186px] xl:flex xl:items-center xl:pl-12 xl:border-l-[1px] xl:border-black">
           <div className="flex flex-col ">
             <p className="text-xl uppercase pb-3">Connect WIth Us</p>
             <div className="w-[45px] flex flex-row gap-6">
-              <img src={fbIcon} alt="facebook icon" />
-              <img src={inIcon} alt="LinkedIn icon" />
+              <a href="">
+                <img src={fbIcon} alt="facebook icon" />
+              </a>
+              <a href="">
+                <img src={inIcon} alt="LinkedIn icon" />
+              </a>
             </div>
           </div>
         </div>
 
         <div className="text-base uppercase space-y-1  xl:h-[186px] xl:flex xl:flex-col xl:justify-center xl:items-start xl:pl-12 xl:border-l-[1px] xl:border-black">
-          <p>About Us</p>
-          <p>Careers</p>
-          <p>Our Brands</p>
+          <a href="/whoweare">
+            <p>About Us</p>
+          </a>
+          <a href="/careers">
+            <p>Careers</p>
+          </a>
+          <a href="/ourbrands">
+            <p>Our Brands</p>
+          </a>
         </div>
 
         <div className="lg:flex lg:flex-row  xl:border-l-[1px] xl:border-black">
