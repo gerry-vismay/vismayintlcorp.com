@@ -15,7 +15,7 @@ const PlatinumKaraokePage = () => {
   return (
     <section className="mb-10">
       <Banner desktopImage={desktopImg} mobileImage={mobileImg} />
-      <div className="px-80 h-[150px] bg-[#F12626] text-white flex justify-between items-center">
+      <div className="px-4 lg:px-80 h-12 lg:h-[150px] bg-[#F12626] text-white flex justify-between items-center">
         <Attributes number="57" label="SM Stores" />
         <Attributes number="7" label="Robinsons Stores" />
         <Attributes number="6" label="Metro Stores" />
