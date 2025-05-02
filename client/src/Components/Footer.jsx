@@ -21,12 +21,12 @@ const Footer = () => {
         <div className=" xl:h-[186px] xl:flex xl:items-center xl:pl-12 xl:border-l-[1px] xl:border-black">
           <div className="flex flex-col ">
             <p className="text-xl uppercase pb-3">Connect WIth Us</p>
-            <div className="w-[45px] flex flex-row gap-6">
-              <a href="">
-                <img src={fbIcon} alt="facebook icon" />
+            <div className="flex flex-row gap-6">
+              <a href="#">
+                <img src={fbIcon} alt="facebook icon" className="w-[45px]" />
               </a>
-              <a href="">
-                <img src={inIcon} alt="LinkedIn icon" />
+              <a href="#">
+                <img src={inIcon} alt="LinkedIn icon" className="w-[45px]" />
               </a>
             </div>
           </div>
