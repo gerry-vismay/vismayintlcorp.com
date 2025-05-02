@@ -56,10 +56,6 @@ const Home = () => {
           prestigious brands of electronic products such as Symphony air cooler,
           strontium SD card, Mifa Bluetooth speaker, Adidas mobile cases etc."
       />
-
-      <div className="flex justify-center py-8">
-        <TButton label="Who We Are" href="/whoweare" />
-      </div>
     </main>
   );
 };
