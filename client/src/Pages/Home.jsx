@@ -1,14 +1,13 @@
 import React from "react";
-import Banner from "./Banner";
-import WhoWeAreCard from "../../Components/whoweare/Card";
-import TButton from "../../Components/buttons/TButton";
-import ImgWithDetailsCard from "../../Components/imgWithDetails/Card";
-import milestonesIcon from "../../assets/icons/Milestones.png";
-import aspirationsIcon from "../../assets/icons/Aspirations.png";
-import karaokeImg from "../../assets/home/KaraokeDivision.png";
-import electronicsImg from "../../assets/home/ElectronicsDivision.png";
-import desktopImage from "../../assets/img/desktop-banner/webbanner.png";
-import mobileImage from "../../assets/img/mobile-banner/mobile-banner.png";
+import Banner from "../components/banner/Banner";
+import WhoWeAreCard from "../Components/whoweare/Card";
+import ImgWithDetailsCard from "../components/common/Card";
+import milestonesIcon from "../assets/icons/Milestones.png";
+import aspirationsIcon from "../assets/icons/Aspirations.png";
+import karaokeImg from "../assets/images/home/KaraokeDivision.png";
+import electronicsImg from "../assets/images/home/ElectronicsDivision.png";
+import desktopImage from "../assets/images/desktop-banner/webbanner.png";
+import mobileImage from "../assets/images/mobile-banner/mobile-banner.png";
 
 const Home = () => {
   return (

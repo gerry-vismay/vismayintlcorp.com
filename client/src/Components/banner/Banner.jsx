@@ -1,9 +1,9 @@
 import React from "react";
 
-const Banner = ({ desktopImage, mobileImage, className = "" }) => {
+const Banner = ({ desktopImage, mobileImage, className = "", link }) => {
   return (
     <div className={`${className}`}>
-      <a href="/">
+      <a href={link}>
         <div className="lg:block hidden ">
           <img
             src={desktopImage}

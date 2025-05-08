@@ -7,10 +7,10 @@ import missionIcon from "../assets/icons/Mission.png";
 import visionIcon from "../assets/icons/Vision.png";
 
 // banners
-import whoweareIconDesktop from "../assets/img/desktop-banner/webbanner1.png";
-import whoweareIconMobile from "../assets/img/mobile-banner/mobile-banner1.png";
+import whoweareIconDesktop from "../assets/images/desktop-banner/webbanner1.png";
+import whoweareIconMobile from "../assets/images/mobile-banner/mobile-banner1.png";
 
-import Banner from "../Container/home/Banner";
+import Banner from "../components/banner/Banner";
 const WhoWeArePage = () => {
   const iconsPath = "/icons";
   return (

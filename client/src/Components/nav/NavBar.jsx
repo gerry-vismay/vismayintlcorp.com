@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../../assets/vismayLogo.png";
+import logo from "../../assets/images/vismayLogo.png";
 
 import {
   Navbar,

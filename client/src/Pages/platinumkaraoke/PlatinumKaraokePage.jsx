@@ -1,15 +1,15 @@
 import React from "react";
 
-import Button from "../../Components/buttons/TButton";
+import Button from "../../components/common/Button";
 
-import Banner from "../../Container/home/Banner";
-import desktopImg from "../../assets/img/desktop-banner/PK.png";
-import mobileImg from "../../assets/img/mobile-banner/PK.png";
+import Banner from "../../components/banner/Banner";
+import desktopImg from "../../assets/images/desktop-banner/PK.png";
+import mobileImg from "../../assets/images/mobile-banner/PK.png";
 import Attributes from "./attributes/Attributes";
-import ImgWithDetailsCard from "../../Components/imgWithDetails/Card";
+import ImgWithDetailsCard from "../../components/common/Card";
 
-import pk23KSongs from "../../assets/home/pk/23k songs.png";
-import pkAlpha2 from "../../assets/home/pk/alpha2.png";
+import pk23KSongs from "../../assets/images/home/pk/23k songs.png";
+import pkAlpha2 from "../../assets/images/home/pk/alpha2.png";
 
 const PlatinumKaraokePage = () => {
   return (

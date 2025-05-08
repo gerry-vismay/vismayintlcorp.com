@@ -1,14 +1,14 @@
 import React from "react";
 
-import Button from "../../Components/buttons/TButton";
+import Button from "../../components/common/Button";
 
-import Banner from "../../Container/home/Banner";
-import desktopImg from "../../assets/img/desktop-banner/lf.png";
-import mobileImg from "../../assets//img/mobile-banner/lf.png";
+import Banner from "../../components/banner/Banner";
+import desktopImg from "../../assets/images/desktop-banner/lf.png";
+import mobileImg from "../../assets//images/mobile-banner/lf.png";
 
-import ImgWithDetailsCard from "../../Components/imgWithDetails/Card";
-import leftImg from "../../assets/home/lf/laifen 2.png";
-import rightImg from "../../assets/home/lf/laifen1.png";
+import ImgWithDetailsCard from "../../components/common/Card";
+import leftImg from "../../assets/images/home/lf/laifen 2.png";
+import rightImg from "../../assets/images/home/lf/laifen1.png";
 
 const LaifenPage = () => {
   return (

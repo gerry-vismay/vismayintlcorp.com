@@ -44,10 +44,11 @@ function authenticate(req, res, next) {
   if (session && session.valid && Date.now() < session.expiresAt) {
     return next();
   }
-  //   Optimal: clean up expired sessions
+
   if (session && Date.now() >= session.expiresAt) {
-    delete session[token];
+    delete sessions[token]; // ✅ correct deletion
   }
+
   res.status(403).json({ message: "Unauthorized or session expired" });
 }
 
@@ -84,9 +85,38 @@ app.post("/api/items", authenticate, (req, res) => {
   }
 });
 
+// Delete item by ID
+app.delete("/api/items/:id", authenticate, (req, res) => {
+  const id = parseInt(req.params.id);
+  console.log("Deleting item with id:", id); // <-- add this
+  const data = JSON.parse(fs.readFileSync(DATA_FILE, "utf-8"));
+  const filtered = data.filter((item) => item.id !== id);
+
+  fs.writeFileSync(DATA_FILE, JSON.stringify(filtered, null, 2));
+  res.json({ success: true });
+});
+
+// PUT (update) item by ID
+app.put("/api/items/:id", authenticate, (req, res) => {
+  const id = parseInt(req.params.id);
+  const { name, price } = req.body;
+
+  const data = JSON.parse(fs.readFileSync(DATA_FILE, "utf-8"));
+  const index = data.findIndex((item) => item.id === id);
+
+  if (index === -1) return res.status(404).send("Item not found");
+
+  console.log(`Updating item ${id} to`, { name, price });
+
+  data[index] = { ...data[index], name, price: parseFloat(price) };
+  fs.writeFileSync(DATA_FILE, JSON.stringify(data, null, 2));
+  res.json(data[index]);
+});
+
+// ✅ Fix logout handler
 app.post("/api/logout", (req, res) => {
   const token = req.headers.authorization;
-  delete session[token];
+  delete sessions[token]; // ✅ use correct object name
   res.json({ success: true, message: "Logged out" });
 });
 

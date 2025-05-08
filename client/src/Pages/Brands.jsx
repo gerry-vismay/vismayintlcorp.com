@@ -1,16 +1,16 @@
 import React from "react";
-import Banner from "../Container/home/Banner";
+import Banner from "../components/banner/Banner";
 import StaticBanner from "./../Components/banner/StaticBanner";
 
 // banner
-import desktopImgPK from "../assets/staticbanner/pk.png";
-import desktopImgLF from "../assets/staticbanner/lf.png";
+import desktopImgPK from "../assets/images/staticbanner/pk.png";
+import desktopImgLF from "../assets/images/staticbanner/lf.png";
 
-import mobileImgPK from "../assets/staticbanner/mobile-pk.png";
-import mobileImgLF from "../assets/staticbanner/mobile-lf.png";
+import mobileImgPK from "../assets/images/staticbanner/mobile-pk.png";
+import mobileImgLF from "../assets/images/staticbanner/mobile-lf.png";
 
-import desktopImage from "../assets/img/desktop-banner/webbanner.png";
-import mobileImage from "../assets/img/mobile-banner/mobile-banner.png";
+import desktopImage from "../assets/images/desktop-banner/webbanner.png";
+import mobileImage from "../assets/images/mobile-banner/mobile-banner.png";
 
 const Brands = () => {
   return (

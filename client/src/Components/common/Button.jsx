@@ -1,6 +1,6 @@
 import React from "react";
 
-const TButton = ({ href, label, className = "" }) => {
+const Button = ({ href, label, className = "" }) => {
   return (
     <a
       href={href}
@@ -11,4 +11,4 @@ const TButton = ({ href, label, className = "" }) => {
   );
 };
 
-export default TButton;
+export default Button;
