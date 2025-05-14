@@ -5,6 +5,7 @@ exports.getItems = (req, res) => {
     const data = readData();
     res.json(data);
   } catch (err) {
+    console.error("GET error:", err);
     res.status(500).send({ message: "Failed to read data" });
   }
 };

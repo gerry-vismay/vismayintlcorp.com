@@ -1,7 +1,7 @@
 const {
   createSession,
   destroySession,
-} = require("../middleware/authMIddleware");
+} = require("../middleware/authMiddleware");
 
 const ADMIN_USERNAME = "admin";
 const ADMIN_PASSWORD = "123";

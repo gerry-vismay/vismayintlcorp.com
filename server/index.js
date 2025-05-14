@@ -26,11 +26,6 @@
 //       expiresAt: Date.now() + 3600000, // Token valid for 1 hour
 //     };
 
-//     console.log(
-//       `New session token created: ${token}, expires at ${new Date(
-//         sessions[token].expiresAt
-//       )}`
-//     );
 //     res.json({ success: true, token });
 //   } else {
 //     res.status(401).json({ success: false, message: "Invalid credentials" });

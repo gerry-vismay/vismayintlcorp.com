@@ -9,16 +9,25 @@ export default function Dashboard() {
 
   // get all Items
   const fetchItems = async () => {
+    const token = localStorage.getItem("token");
+
     try {
       const res = await fetch("http://localhost:5000/api/items", {
-        headers: { Authorization: localStorage.getItem("token") },
+        headers: {
+          Authorization: token, // 👈 just the token
+        },
       });
-      if (!res.ok) throw new Error("Unauthorized or Server Error");
+
+      if (!res.ok) {
+        const err = await res.json();
+        console.error("Failed to fetch:", err.message);
+        return;
+      }
 
       const data = await res.json();
       setItems(data);
     } catch (err) {
-      console.log("Failed to fetch Items", err);
+      console.log("Network or parsing error:", err);
     }
   };
 

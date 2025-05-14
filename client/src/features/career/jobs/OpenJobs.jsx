@@ -9,34 +9,34 @@ import { careers } from "../../../data/data.js";
 import Card from "./job/Card.jsx";
 import { useParams } from "react-router-dom";
 
-const jobOffers = [
-  {
-    id: 1,
-    title: "Graphics Artist",
-    department: "marketing",
-    qualification: [
-      "Must be pursuing or have completed a college-level course in Information Technology, Computer Science, Advertising/Media, Art/Design/Creative Multimedia, or a related field.",
-      "At least 6 months related working experience",
-      "Knowledgeable in graphic design software, including Adobe Illustrator, Photoshop, Corel Draw and Autocad",
-      "Freehand drawing skills are a plus",
-      "Results oriented and must be keen to details",
-      "College undergraduates are also encouraged to apply",
-    ],
-  },
-  {
-    id: 2,
-    title: "Marketing Specialist",
-    department: "marketing",
-    qualification: [
-      "Must have good English communication and interpersonal skills",
-      "Preferably with sales experience (insurance sales, real estate, B2B or B2C field sales, etc.)",
-      "Physically-able to perform a field-based work",
-      "Goal-oriented and can work with minimum supervision",
-      "Interest in sales, training, and upskilling",
-      "Willing to be assigned to any site and travel for work",
-    ],
-  },
-];
+// const jobOffers = [
+//   {
+//     id: 1,
+//     title: "Graphics Artist",
+//     department: "marketing",
+//     qualification: [
+//       "Must be pursuing or have completed a college-level course in Information Technology, Computer Science, Advertising/Media, Art/Design/Creative Multimedia, or a related field.",
+//       "At least 6 months related working experience",
+//       "Knowledgeable in graphic design software, including Adobe Illustrator, Photoshop, Corel Draw and Autocad",
+//       "Freehand drawing skills are a plus",
+//       "Results oriented and must be keen to details",
+//       "College undergraduates are also encouraged to apply",
+//     ],
+//   },
+//   {
+//     id: 2,
+//     title: "Marketing Specialist",
+//     department: "marketing",
+//     qualification: [
+//       "Must have good English communication and interpersonal skills",
+//       "Preferably with sales experience (insurance sales, real estate, B2B or B2C field sales, etc.)",
+//       "Physically-able to perform a field-based work",
+//       "Goal-oriented and can work with minimum supervision",
+//       "Interest in sales, training, and upskilling",
+//       "Willing to be assigned to any site and travel for work",
+//     ],
+//   },
+// ];
 
 const OpenJobs = () => {
   const [items, setItems] = useState([]);
@@ -46,24 +46,33 @@ const OpenJobs = () => {
   }, []);
 
   const fetchItems = async () => {
+    const token = localStorage.getItem("token");
     try {
       const res = await fetch("http://localhost:5000/api/items", {
-        headers: { Authorization: localStorage.getItem("token") },
+        headers: {
+          Authorization: token,
+        },
       });
 
       const data = await res.json();
-      setItems(data);
+      console.log("Fetched from /api/items:", data);
+
+      setItems(Array.isArray(data) ? data : []); // prevent .filter crash
     } catch (err) {
-      console.log("Failed to Fetch Items", err);
+      console.error("Failed to fetch:", err);
     }
   };
 
   const { department } = useParams(); // create params for the value to render
 
-  //
-  const filterDepartment = items.filter(
-    (job) => department === job.department.toLowerCase()
-  );
+  // //
+  // const filterDepartment = items.filter(
+  //   (job) => department === job.department.toLowerCase()
+  // );
+
+  const filterDepartment = Array.isArray(items)
+    ? items.filter((job) => department === job.department.toLowerCase())
+    : [];
 
   const jobOpens = careers.find(
     (jobOPen) => jobOPen.department.toLowerCase() === department

@@ -1,10 +1,10 @@
 const sessions = {};
 
 function createSession() {
-  const token = Date.now().toString();
+  const token = Date.now().toString(); // basic token
   sessions[token] = {
     valid: true,
-    expiresAt: Date.now() + 3600000,
+    expiresAt: Date.now() + 3600000, // Token valid for 1 hour
   };
   return token;
 }
