@@ -1,0 +1,43 @@
+[
+  {
+    "id": 1,
+    "position": "Singer Promodiser",
+    "department": "HR",
+    "qualifications": [
+      "Vocational Diploma/ Short Course Certificate, College Level/Bachelor’s Degree in any Field;",
+      "Male/Female;",
+      "Musically Inclined",
+      "Has a good voice quality and can carry a tune;",
+      "Should have confident manner;",
+      "Good communication skills;",
+      "Preferably at least 5 months experience in sales & inventory but not necessary as long as he/she could handle the responsibility;",
+      "Self-motivated & flexible;",
+      "Willing to be trained and hard-working;",
+      "With pleasing personality and fair complexion",
+      "To be assigned at"
+    ],
+    "locations": [
+      "Robinson OPUS",
+      "Robinson IRIGA",
+      "SM Department Store CDO Downtown Premier",
+      "SM Department Store La Union",
+      "SM Appliances Store La Union",
+      "SM Appliances Store Zamboanga",
+      "SM Appliances Store San Mateo",
+      "Abenson San Fernando",
+      "SM Appliances Store Manila",
+      "Robinson North Tacloban",
+      "Robinson Tacloban",
+      "SM Appliances Store Grand Central",
+      "SM Department Store Clark",
+      "SM Appliances Store Marilao",
+      "SM Department Store Lucena",
+      "Metro Ayala Cebu",
+      "SM Hypermarket San Lazaro",
+      "SM Appliances Store SRP CEBU (Seaside)",
+      "SM Appliances Store Laog",
+      "SM Department Store Mindoro Zamboanga"
+    ],
+    "status": "Active"
+  }
+]

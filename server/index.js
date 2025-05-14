@@ -6,7 +6,7 @@ const cors = require("cors");
 const app = express();
 const PORT = 5000;
 
-const DATA_FILE = path.join(__dirname, "data.json");
+const DATA_FILE = path.join(__dirname, "jobOpen.json");
 
 const ADMIN_USERNAME = "admin";
 const ADMIN_PASSWORD = "123"; // In real apps, use hashed passwords!
@@ -66,14 +66,19 @@ app.get("/api/items", authenticate, (req, res) => {
 // Protected Add item
 app.post("/api/items", authenticate, (req, res) => {
   try {
-    const { name, price } = req.body;
-    if (!name || !price) return res.status(400).send("Missing fields");
+    const { position, department, qualifications, locations, status } =
+      req.body;
+    if (!position || !department || !qualifications || !locations)
+      return res.status(400).send("Missing fields");
 
     const data = JSON.parse(fs.readFileSync(DATA_FILE, "utf-8"));
     const newItem = {
       id: data.length ? data[data.length - 1].id + 1 : 1,
-      name,
-      price: parseFloat(price),
+      position,
+      department,
+      qualifications,
+      locations,
+      status,
     };
 
     data.push(newItem);
@@ -99,16 +104,30 @@ app.delete("/api/items/:id", authenticate, (req, res) => {
 // PUT (update) item by ID
 app.put("/api/items/:id", authenticate, (req, res) => {
   const id = parseInt(req.params.id);
-  const { name, price } = req.body;
+  const { position, department, qualifications, locations, status } = req.body;
 
   const data = JSON.parse(fs.readFileSync(DATA_FILE, "utf-8"));
   const index = data.findIndex((item) => item.id === id);
 
   if (index === -1) return res.status(404).send("Item not found");
 
-  console.log(`Updating item ${id} to`, { name, price });
+  console.log(`Updating item ${id} to`, {
+    position,
+    department,
+    qualifications,
+    locations,
+    status,
+  });
 
-  data[index] = { ...data[index], name, price: parseFloat(price) };
+  data[index] = {
+    ...data[index],
+    position,
+    department,
+    qualifications,
+    locations,
+    status,
+  };
+  console.log(data[index]);
   fs.writeFileSync(DATA_FILE, JSON.stringify(data, null, 2));
   res.json(data[index]);
 });

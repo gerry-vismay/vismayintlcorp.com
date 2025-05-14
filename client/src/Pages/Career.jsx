@@ -1,5 +1,5 @@
 import React from "react";
-import CareerCard from "../features/career/jobs/job/Card.jsx";
+import CareerCard from "../features/career/Card.jsx";
 
 // banners
 import Banner from "../components/banner/Banner.jsx";

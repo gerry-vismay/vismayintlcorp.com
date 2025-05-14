@@ -8,7 +8,7 @@ export const careers = [
     id: 1,
     img: hrIcon,
     department: "HR",
-    openJobs: 0,
+    openJobs: 1,
   },
   {
     id: 2,

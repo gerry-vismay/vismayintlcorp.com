@@ -1,15 +1,19 @@
 import React from "react";
 import Button from "../../../../components/common/Button";
 
-const Card = ({ title, qualifications }) => {
+const Card = ({ title, qualifications, locations }) => {
   return (
-    <div>
-      <h2 className="text-[1.375rem] mb-6 mt-14">{title}</h2>
+    <div className=" mx-10">
+      <h2 className=" lg:text-[1.375rem] lg:mb-6 mt-6 lg:mt-14">{title}</h2>
       <p className="mb-6">Job Qualifications:</p>
-      <div className="font-normal flex justify-between items-center">
-        <ul className="list-disc list-inside flex-1 max-w-[42rem]">
-          {qualifications}
-        </ul>
+      <div className="font-normal flex flex-col lg:flex-row lg:justify-between items-center gap-y-6 lg:gap-y-0">
+        <div>
+          <ul className="list-disc list-outside ml-5 flex-1 max-w-[42rem]">
+            {qualifications}
+          </ul>
+          <ul className="text-base ml-5 flex-1 max-w-[42rem]">{locations}</ul>
+        </div>
+
         <Button
           label="Apply Now"
           href="mailto:hrrecruitment@vismayintlcorp.com"

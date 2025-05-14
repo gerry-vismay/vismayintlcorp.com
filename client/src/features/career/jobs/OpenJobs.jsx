@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 // banners
 import Banner from "../../../components/banner/Banner.jsx";
@@ -39,10 +39,30 @@ const jobOffers = [
 ];
 
 const OpenJobs = () => {
+  const [items, setItems] = useState([]);
+
+  useEffect(() => {
+    fetchItems();
+  }, []);
+
+  const fetchItems = async () => {
+    try {
+      const res = await fetch("http://localhost:5000/api/items", {
+        headers: { Authorization: localStorage.getItem("token") },
+      });
+
+      const data = await res.json();
+      setItems(data);
+    } catch (err) {
+      console.log("Failed to Fetch Items", err);
+    }
+  };
+
   const { department } = useParams(); // create params for the value to render
 
-  const filterDepartment = jobOffers.filter(
-    (offer) => department === offer.department.toLowerCase()
+  //
+  const filterDepartment = items.filter(
+    (job) => department === job.department.toLowerCase()
   );
 
   const jobOpens = careers.find(
@@ -51,26 +71,32 @@ const OpenJobs = () => {
 
   const openJobsCOunt = jobOpens ? jobOpens.openJobs : 0;
 
-  console.log(department);
-  console.log(filterDepartment);
+  // console.log(department);
+  // console.log(filterDepartment);
 
-  console.log(careers);
+  // console.log(careers);
 
-  console.log(openJobsCOunt);
+  // console.log(openJobsCOunt);
   return (
-    <section className=" text-xl font-semibold mb-14">
+    <section className="text-xs lg:text-xl font-semibold mb-14 lg:mx-0">
       <Banner desktopImage={careerImg} mobileImage={careerMobile} />
       <div className="max-w-screen-2xl mx-auto ">
-        <h2 className="text-[rgb(7,84,156)] text-2xl mt-14">
+        <h2 className="text-[rgb(7,84,156)] lg:text-2xl mt-14 mx-10">
           {openJobsCOunt} Job(s) available
         </h2>
-        {filterDepartment.map(({ id, title, qualification }) => {
+        {filterDepartment.map(({ id, position, qualifications, locations }) => {
           return (
             <Card
               key={id}
-              title={title}
-              qualifications={qualification.map((requirement, index) => (
-                <li key={index}>{requirement}</li>
+              title={position}
+              qualifications={qualifications.map((requirement, i) => (
+                <li key={i}>{requirement}</li>
+              ))}
+              // locations={locations.join(", ")}
+              locations={locations.map((location, i) => (
+                <li className="italic" key={i}>
+                  {location}
+                </li>
               ))}
             />
           );
