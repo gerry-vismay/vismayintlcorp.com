@@ -40,14 +40,14 @@ import { useParams } from "react-router-dom";
 
 const OpenJobs = () => {
   const [items, setItems] = useState([]);
-
+  const apiURL = import.meta.env.VITE_API_URL;
   useEffect(() => {
     fetchItems();
   }, []);
 
   const fetchItems = async () => {
     try {
-      const res = await fetch("http://localhost:5000/api/items");
+      const res = await fetch(`${apiURL}/api/items`);
 
       const data = await res.json();
       console.log("Fetched from /api/items:", data);

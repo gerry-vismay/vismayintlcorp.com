@@ -6,7 +6,13 @@ const deptRoutes = require("./routes/deptRoutes");
 
 const app = express();
 
-app.use(cors());
+app.use(
+  cors({
+    origin: "https://vismayintlcorp.com",
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    credentials: true,
+  })
+);
 app.use(express.json());
 
 app.use("/api", authRoutes);

@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 
 export default function Dashboard() {
   const [items, setItems] = useState([]);
-
+  const apiURL = import.meta.env.VITE_API_URL;
   useEffect(() => {
     fetchItems();
   }, []);
@@ -12,7 +12,7 @@ export default function Dashboard() {
     try {
       const token = localStorage.getItem("token");
 
-      const res = await fetch("http://localhost:5000/api/items", {
+      const res = await fetch(`${apiURL}/api/items`, {
         headers: {
           Authorization: token, // 👈 just the token
         },

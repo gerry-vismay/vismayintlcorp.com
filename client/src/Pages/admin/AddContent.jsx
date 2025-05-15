@@ -12,14 +12,14 @@ const AddContent = () => {
     locations: [],
     status: "Active",
   });
-  const [qualificationInput, setQualificationInput] = useState("");
-  const [locationInput, setLocationInput] = useState("");
+
+  const apiURL = import.meta.env.VITE_API_URL;
 
   const token = localStorage.getItem("token");
   // Add Items
   const handleAddItem = async () => {
     try {
-      const res = await fetch("http://localhost:5000/api/items", {
+      const res = await fetch(`${apiURL}/api/items`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

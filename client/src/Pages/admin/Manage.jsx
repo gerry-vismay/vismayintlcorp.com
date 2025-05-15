@@ -6,7 +6,7 @@ const Manage = () => {
   const [items, setItems] = useState([]);
   const [editItemId, setEditItemId] = useState(null);
   const [editForm, setEditForm] = useState(null);
-
+  const apiURL = import.meta.env.VITE_API_URL;
   useEffect(() => {
     fetchItems();
   }, []);
@@ -14,7 +14,7 @@ const Manage = () => {
   // get all Items
   const fetchItems = async () => {
     try {
-      const res = await fetch("http://localhost:5000/api/items", {
+      const res = await fetch(`${apiURL}/api/items`, {
         headers: { Authorization: localStorage.getItem("token") },
       });
       if (!res.ok) throw new Error("Unauthorized or Server Error");
@@ -28,7 +28,7 @@ const Manage = () => {
   // Delete Items
   const handleDelete = async (id) => {
     try {
-      const res = await fetch(`http://localhost:5000/api/items/${id}`, {
+      const res = await fetch(`${apiURL}/api/items/${id}`, {
         method: "DELETE",
         headers: {
           Authorization: localStorage.getItem("token"),
@@ -52,7 +52,7 @@ const Manage = () => {
   // Update items
   const handleUpdate = async (id) => {
     try {
-      await fetch(`http://localhost:5000/api/items/${id}`, {
+      await fetch(`${apiURL}/api/items/${id}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",

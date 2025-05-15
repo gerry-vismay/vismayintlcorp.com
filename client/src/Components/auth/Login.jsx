@@ -9,6 +9,7 @@ const Login = () => {
 
   const navigate = useNavigate();
 
+  const apiURL = import.meta.env.VITE_API_URL;
   // Load saved credentials on mount
   useEffect(() => {
     const savedForm = localStorage.getItem("rememberedCredentials");
@@ -21,7 +22,7 @@ const Login = () => {
 
   const handleLogin = async () => {
     try {
-      const res = await fetch("http://localhost:5000/api/login", {
+      const res = await fetch(`${apiURL}/api/login`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(form),
