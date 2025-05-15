@@ -2,16 +2,21 @@ const sessions = {};
 
 function createSession() {
   const token = Date.now().toString(); // basic token
+  const expiresAt = Date.now() + 60 * 60 * 1000; // Token valid for 1 hour
   sessions[token] = {
     valid: true,
-    expiresAt: Date.now() + 3600000, // Token valid for 1 hour
+    expiresAt,
   };
-  return token;
+  return { token, expiresAt };
 }
 
 function authenticate(req, res, next) {
   const token = req.headers.authorization;
   const session = sessions[token];
+
+  console.log("Token received:", token);
+  console.log("Session found:", session);
+
   if (session && session.valid && Date.now() < session.expiresAt) {
     return next();
   }
@@ -31,4 +36,5 @@ module.exports = {
   createSession,
   authenticate,
   destroySession,
+  sessions, //  export sessions in case needed elsewhere
 };

@@ -9,9 +9,9 @@ export default function Dashboard() {
 
   // get all Items
   const fetchItems = async () => {
-    const token = localStorage.getItem("token");
-
     try {
+      const token = localStorage.getItem("token");
+
       const res = await fetch("http://localhost:5000/api/items", {
         headers: {
           Authorization: token, // 👈 just the token
@@ -19,9 +19,7 @@ export default function Dashboard() {
       });
 
       if (!res.ok) {
-        const err = await res.json();
-        console.error("Failed to fetch:", err.message);
-        return;
+        throw new Error("Unauthorized or Session Expired!");
       }
 
       const data = await res.json();

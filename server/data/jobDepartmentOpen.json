@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "img": "/images/career/career1.png",
+    "department": "HR",
+    "openJobs": 1
+  },
+  {
+    "id": 2,
+    "img": "/images/career/career2.png",
+    "department": "Marketing",
+    "openJobs": 0
+  },
+  {
+    "id": 3,
+    "img": "/images/career/career3.png",
+    "department": "CSR",
+    "openJobs": 0
+  },
+  {
+    "id": 4,
+    "img": "/images/career/career4.png",
+    "department": "Accounting",
+    "openJobs": 0
+  },
+  {
+    "id": 5,
+    "img": "/images/career/career4.png",
+    "department": "Online Sales",
+    "openJobs": 0
+  }
+]

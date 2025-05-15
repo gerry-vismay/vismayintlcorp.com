@@ -10,6 +10,7 @@ const Card = ({ title, qualifications, locations }) => {
         <div>
           <ul className="list-disc list-outside ml-5 flex-1 max-w-[42rem]">
             {qualifications}
+            <li>To be assigned at</li>
           </ul>
           <ul className="text-base ml-5 flex-1 max-w-[42rem]">{locations}</ul>
         </div>

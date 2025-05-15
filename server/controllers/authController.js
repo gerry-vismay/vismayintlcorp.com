@@ -9,8 +9,9 @@ const ADMIN_PASSWORD = "123";
 exports.login = (req, res) => {
   const { username, password } = req.body;
   if (username === ADMIN_USERNAME && password === ADMIN_PASSWORD) {
-    const token = createSession();
-    res.json({ success: true, token });
+    const { token, expiresAt } = createSession();
+    // const expiresAt = sessions[token].expiresAt; // ⬅️ get it from session memory
+    res.json({ success: true, token, expiresAt });
   } else {
     res.status(401).json({ success: false, message: "Invalid credentials" });
   }

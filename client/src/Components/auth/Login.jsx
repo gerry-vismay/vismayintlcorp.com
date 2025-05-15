@@ -27,11 +27,14 @@ const Login = () => {
         body: JSON.stringify(form),
       });
       if (!res.ok) {
-        throw new Error("Invalid credentials");
+        const errorData = await res.json();
+        throw new Error(errorData.message || "Login failed");
       }
 
       const data = await res.json();
       localStorage.setItem("token", data.token);
+      localStorage.setItem("expiresAt", data.expiresAt); //
+      console.log(data);
 
       if (remember) {
         localStorage.setItem("rememberedCredentials", JSON.stringify(form));
