@@ -46,13 +46,8 @@ const OpenJobs = () => {
   }, []);
 
   const fetchItems = async () => {
-    const token = localStorage.getItem("token");
     try {
-      const res = await fetch("http://localhost:5000/api/items", {
-        headers: {
-          Authorization: token,
-        },
-      });
+      const res = await fetch("http://localhost:5000/api/items");
 
       const data = await res.json();
       console.log("Fetched from /api/items:", data);
