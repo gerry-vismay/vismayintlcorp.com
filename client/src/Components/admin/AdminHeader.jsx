@@ -1,11 +1,12 @@
 import { Menu } from "lucide-react";
 
 const AdminHeader = ({ toggleSidebar }) => {
+  const apiURL = import.meta.env.VITE_API_URL;
   // Logout User
   const handleLogout = async () => {
     const token = localStorage.getItem("token");
 
-    await fetch("http://localhost:5000/api/logout", {
+    await fetch(`${apiURL}/api/logout`, {
       method: "POST",
       headers: { Authorization: token },
     });

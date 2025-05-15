@@ -8,7 +8,7 @@ const app = express();
 
 app.use(
   cors({
-    origin: ["http://localhost:5173","https://vismayintlcorp.com"]
+    origin: ["http://localhost:5173", "https://vismayintlcorp.com"],
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
   })
