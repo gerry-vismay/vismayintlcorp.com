@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import logo from "../../assets/images/vismayLogo.png";
 
 import {
@@ -10,9 +10,30 @@ import {
 } from "@material-tailwind/react";
 
 const NavBar = () => {
-  const [openNav, setOpenNav] = React.useState(false);
+  const [openNav, setOpenNav] = useState(false);
+  const [lastScrollY, setLastScrollY] = useState(0);
+  const [showNavBar, setShowNavBar] = useState(true);
 
-  React.useEffect(() => {
+  const handleScroll = () => {
+    const currentScrollY = window.scrollY;
+    const threshold = 150; // buffer to the navbar not to hide immediately
+
+    if (currentScrollY > lastScrollY && currentScrollY > threshold) {
+      setShowNavBar(false);
+    } else {
+      setShowNavBar(true);
+    }
+
+    setLastScrollY(currentScrollY);
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [lastScrollY]);
+
+  useEffect(() => {
     window.addEventListener(
       "resize",
       () => window.innerWidth >= 960 && setOpenNav(false)
@@ -20,7 +41,7 @@ const NavBar = () => {
   }, []);
 
   const navList = (
-    <ul className="mt-2 mb-4 flex flex-col gap-2 lg:mb-0 lg:mt-0 xl:flex-row xl:items-center xl:gap-6 ">
+    <ul className="mt-2 mb-4 flex flex-col gap-2 lg:mb-0 lg:mt-0 xl:flex-row xl:items-center xl:gap-6  ">
       <Typography
         as="li"
         variant="small"
@@ -77,9 +98,13 @@ const NavBar = () => {
   );
 
   return (
-    <div className="max-h-[150px] w-full ">
-      <Navbar className="sticky py-0 bg-[#D9D9D9] top-0 z-10 h-max max-w-full rounded-none px-4">
-        <div className="flex items-center justify-between xl:px-16 px-4 text-blue-gray-900">
+    <div
+      className={`max-h-[150px] w-full sticky backdrop-blur-md top-0 transition-all duration-200 ease-in-out ${
+        showNavBar ? "translate-y-0" : "-translate-y-full"
+      }`}
+    >
+      <Navbar className="py-0 bg-white/5 z-10 h-max max-w-full rounded-none px-4">
+        <div className="flex items-center justify-between xl:px-16 px-4 text-blue-gray-900 ">
           <Typography
             as="a"
             href="/"
