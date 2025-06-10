@@ -24,13 +24,13 @@ const WhoWeArePage = () => {
           color="blue"
           img={missionIcon}
           title="Mission"
-          description="Our mission is to transform how people live and work by developing dependable,cutting-edge technology products that boost efficiency, connectivity, and convenience. We work hard to provide innovative solutions that enable  people, organizations, and communities to prosper in the digital era. "
+          description="Our mission is to transform how people live and work by developing dependable, cutting-edge technology products that boost efficiency, connectivity, and convenience. We work hard to provide innovative solutions that enable  people, organizations, and communities to prosper in the digital era. "
         />
         <WhoWeAre
           color="blue"
           img={visionIcon}
           title="Vision"
-          description="Our Vision is to be the leading provider of technology products that seamlesly integrate into people's lives, enabling then to unlock their full potential. We envision a future where our products are at the forefront of technological advancement, empowering individuals to connect, create, and achieve their goal with ease. By leveraging  our expertise and passion for innovation, we aim to shape the digital landscape and make a positive impact on society."
+          description="Our Vision is to be the leading provider of technology products that seamlessly integrate into people's lives, enabling then to unlock their full potential. We envision a future where our products are at the forefront of technological advancement, empowering individuals to connect, create, and achieve their goal with ease. By leveraging  our expertise and passion for innovation, we aim to shape the digital landscape and make a positive impact on society."
         />
       </div>
 
