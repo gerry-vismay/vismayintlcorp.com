@@ -1,13 +1,15 @@
 import React from "react";
 
-const Button = ({ href, label, className = "" }) => {
+const Button = ({ href, label, className = "", onClick, ...props }) => {
   return (
-    <a
+    <button
+      onClick={onClick}
       href={href}
       className={`bg-[#06529B] text-xs md:text-xl text-white py-2 px-8 rounded-full cursor-pointer ${className}`}
+      {...props}
     >
       {label}
-    </a>
+    </button>
   );
 };
 

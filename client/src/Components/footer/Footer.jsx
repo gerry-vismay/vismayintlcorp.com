@@ -8,7 +8,7 @@ import inIcon from "../../assets/icons/footer/LinkedIn icon.png";
 
 const Footer = () => {
   return (
-    <footer className="shadow shadow-gray-700 py-7 bg-[#D9D9D9] px-8">
+    <footer className="shadow shadow-gray-700 py-7 bg-[#D9D9D9] px-8 ">
       <div className="grid grid-cols-1 gap-10 place-items-center  md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 ">
         <a href="/">
           <img
@@ -46,7 +46,7 @@ const Footer = () => {
 
         <div className="lg:flex lg:flex-row  xl:border-l-[1px] xl:border-black">
           <img
-            className="w-[186px] cursor-pointer"
+            className="w-[170px] px-9 cursor-pointer"
             src={DPO}
             alt="DPO-DPS data privacy"
           />

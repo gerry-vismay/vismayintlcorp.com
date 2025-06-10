@@ -1,8 +1,8 @@
 // TagInput.js
-import React from "react";
+import React, { useState } from "react";
 
 const TagInput = ({ value, onChange, placeholder }) => {
-  const [inputValue, setInputValue] = React.useState("");
+  const [inputValue, setInputValue] = useState("");
 
   const handleKeyDown = (e) => {
     if (e.key === "Enter" && inputValue.trim()) {
