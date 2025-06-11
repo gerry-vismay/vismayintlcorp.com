@@ -99,7 +99,7 @@ const NavBar = () => {
 
   return (
     <div
-      className={`max-h-[150px] w-full sticky backdrop-blur-md top-0 transition-all duration-200 ease-in-out ${
+      className={`max-h-[150px] w-full sticky backdrop-blur-md top-0 transition-all duration-200 ease-in-out z-50 ${
         showNavBar ? "translate-y-0" : "-translate-y-full"
       }`}
     >
