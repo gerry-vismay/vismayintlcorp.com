@@ -15,11 +15,7 @@ import mobileImage from "../assets/images/mobile-banner/mobile-banner.png";
 const Brands = () => {
   return (
     <section>
-      <Banner
-        desktopImage={desktopImage}
-        mobileImage={mobileImage}
-        className="pb-7"
-      />
+      <Banner desktopImage={desktopImage} className="pb-7" />
 
       <StaticBanner
         link="/ourbrands/platinumkaraoke"

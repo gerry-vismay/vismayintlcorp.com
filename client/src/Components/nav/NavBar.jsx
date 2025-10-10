@@ -13,6 +13,7 @@ const NavBar = () => {
   const [openNav, setOpenNav] = useState(false);
   const [lastScrollY, setLastScrollY] = useState(0);
   const [showNavBar, setShowNavBar] = useState(true);
+  const [resizeLogo, setResizeLogo] = useState(false);
 
   const handleScroll = () => {
     const currentScrollY = window.scrollY;
@@ -25,6 +26,12 @@ const NavBar = () => {
     }
 
     setLastScrollY(currentScrollY);
+
+    if (currentScrollY > threshold) {
+      setResizeLogo(true);
+    } else {
+      setResizeLogo(false);
+    }
   };
 
   useEffect(() => {
@@ -110,7 +117,15 @@ const NavBar = () => {
             href="/"
             className="mr-4 cursor-pointer py-1.5 font-medium"
           >
-            <img className="w-40 lg:w-[259px] lg:h-[120px]" src={logo} alt="" />
+            <img
+              className={`w-40 lg:w-[259px] lg:h-[120px] ${
+                resizeLogo
+                  ? "lg:w-[150px] lg:h-[80px]"
+                  : "lg:w-[259px] lg:h-[120px]"
+              } transition-all duration-300`}
+              src={logo}
+              alt=""
+            />
           </Typography>
           <div className="flex items-center gap-4">
             <div className="mr-4 hidden xl:block">{navList}</div>
