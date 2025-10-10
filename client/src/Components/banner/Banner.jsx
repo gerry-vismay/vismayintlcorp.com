@@ -1,16 +1,13 @@
 import React from "react";
 
-const Banner = ({ desktopImage, className = "", link }) => {
+const Banner = ({ img, mobile, className = "", link }) => {
   return (
     <div className={`${className}`}>
       <a href={link}>
-        <div className="lg:block hidden ">
-          <img
-            src={desktopImage}
-            alt=""
-            className={`h-full w-full object-cover  `}
-          />
-        </div>
+        <picture className=" ">
+          <source media="(min-width: 768px)" srcset={mobile}></source>
+          <img src={img} alt="" className={`h-full w-full object-cover  `} />
+        </picture>
         {/* <div className="lg:hidden block ">
           <img
             src={mobileImage}

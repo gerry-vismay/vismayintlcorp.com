@@ -60,7 +60,7 @@ const Contact = () => {
     "h-[79px] !mt-6 first:!mt-0 !py-2 !px-4 leading-[100%] !mb-8 !text-xl font-medium  font-Inter font-sans-serif border-4 border-[#06529B] bg-[#06529B] text-white placeholder-white focus:outline-none focus:ring w-full";
   return (
     <section className="flex flex-col items-center min-h-screen bg-white ">
-      <Banner desktopImage={desktopBannerContactUs} className="pb-7" />
+      <Banner img={desktopBannerContactUs} />
       <h2
         className="w-[1062px] h-[77px] font-inter font-bold not-italic text-6xl !m-10 !mt-20 leading-[100%] text-center text-[#06529B]"
         style={{

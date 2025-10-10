@@ -17,12 +17,12 @@ const Home = () => {
   return (
     <main>
       <div>
-        <Banner desktopImage={desktopImage} />
+        <Banner img={desktopImage} />
       </div>
-      <div className="flex justify-around my-12">
+      <div className="flex justify-around flex-col lg:flex-row my-12">
         <WhoWeAreCard
           color="blue"
-          className="w-full mx-auto px-10 "
+          className="w-full mx-auto px-10"
           img={milestones}
           title="Milestones"
           description="Founded in 2000, Vismay International Corporation began with a mission

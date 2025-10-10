@@ -22,28 +22,32 @@ function Footer() {
   return (
     <>
       <div
-        className="flex items-center justify-center w-full min-h-[350px] bg-cover bg-center bg-no-repeat"
+        className="flex items-center justify-center w-full  bg-cover bg-center bg-no-repeat bg-black"
         style={{
           backgroundImage: `url(${imageSrc})`,
         }}
       >
-        <div className="flex justify-between w-[102.5rem] h-[350px] gap-3 px-16 py-20">
-          <div className="flex flex-col w-[499px] gap-[20px]">
-            <p className="text-[#fff] text-[14px] bold font-[700]">
+        <div className="flex justify-between flex-col xl:flex-row xl:w-[102.5rem]  w-auto gap-3 xl:px-16 py-20">
+          <div className="flex flex-col xl:w-[499px] gap-[20px] xl:px-0 px-4 order-1 xl:order-0 xl:mx-auto">
+            <p className="text-[#fff] text-[14px] bold font-[700] text-center xl:text-left">
               Vismay International Corporation is now DPO/DPS compliant,
               certified by the National Privacy Commission
             </p>
-            <div className="flex gap-5">
-              <img
-                className="w-[328px] h-[152px]"
-                src={vismayLogo1}
-                alt="Visymay Logo"
-              />
-              <img className="w-[82px] h-[152px]" src={SPCLogo} alt="SPC" />
+            <div className="flex gap-5 mx-auto xl:mx-0">
+              <a href="/">
+                <img
+                  className="lg:w-[328px] lg:h-[152px] w-[200px] h-[100px]"
+                  src={vismayLogo1}
+                  alt="Visymay Logo"
+                />
+              </a>
+              <a href="/privacy-policy">
+                <img className="w-[82px] h-[152px]" src={SPCLogo} alt="SPC" />
+              </a>
             </div>
           </div>
-          <div>
-            <ul className="flex gap-20">
+          <div className="xl:text-left text-center mx-auto order-0 xl:order-1 xl:pb-0 pb-8">
+            <ul className="flex flex-col xl:flex-row gap-4 xl:gap-20">
               <div>
                 <li className="font-[700] text-[#fff] bold text-[20px] cursor-pointer">
                   Connect With Us

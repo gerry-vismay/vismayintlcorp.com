@@ -1,16 +1,13 @@
 import CareersBanner from "../assets/images/banner/CAREERS.webp";
 import CareerDepartmentSection from "../components/career/CareerDepartmentSection";
 
+import Banner from "../components/banner/Banner";
+
 function Careers() {
   return (
     <>
       <div>
-        <img
-          className="w-[1,922px] h-[825] bg-cover bg-center bg-no-repeat"
-          src={CareersBanner}
-          alt="Careers"
-        />
-
+        <Banner img={CareersBanner} />
         <CareerDepartmentSection />
       </div>
     </>

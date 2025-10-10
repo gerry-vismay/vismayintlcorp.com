@@ -10,12 +10,11 @@ import mobileImgPK from "../assets/images/staticbanner/mobile-pk.png";
 import mobileImgLF from "../assets/images/staticbanner/mobile-lf.png";
 
 import desktopImage from "../assets/images/desktop-banner/webbanner.png";
-import mobileImage from "../assets/images/mobile-banner/mobile-banner.png";
 
 const Brands = () => {
   return (
     <section>
-      <Banner desktopImage={desktopImage} className="pb-7" />
+      <Banner img={desktopImage} />
 
       <StaticBanner
         link="/ourbrands/platinumkaraoke"

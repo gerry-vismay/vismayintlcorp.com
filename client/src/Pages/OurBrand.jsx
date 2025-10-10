@@ -2,13 +2,13 @@ import BRAND from "../assets/images/banner/BRAND.webp";
 import pk from "../assets/images/brand/pk.webp";
 import lf from "../assets/images/brand/laifen.webp";
 
+import Banner from "../components/banner/Banner";
+
 const OurBrand = () => {
   return (
     <div className="flex flex-col items-center min-h-screen bg-gray-50 pb-10">
       {/* Photo Holder */}
-      <div className="w-screen overflow-hidden flex justify-center mb-8">
-        <img src={BRAND} alt="Our Brand" className="w-full h-auto object" />
-      </div>
+      <Banner img={BRAND} />
 
       {/* Main Content */}
       <div className="max-w-[1588px] w-full mx-auto mt-20 !mb-10">

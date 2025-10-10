@@ -17,10 +17,10 @@ function CareerDepartmentSection() {
               <span className="absolute left-0 bottom-0 w-0 h-[1px] bg-[#2f5579b0] transition-all duration-500 group-hover:w-full"></span>
             </p>
           </div>
-          <div>
-            <button className="flex items-center justify-center rounded-full text-[#1c1d1e] white bg-[#0872d7] hover:bg-[#085eaf] px-8 py-2 tracking-tight w-[190px] cursor-pointer">
+          <div className="pt-24">
+            <button className="flex items-center justify-center rounded-full text-[#1c1d1e] bg-[#0872d7] hover:bg-[#085eaf] px-8 py-2 tracking-tight w-[190px] cursor-pointer">
               Learn More
-              <span className="material-symbols-outlined mt-[2px]">
+              <span className="material-symbols-outlined mt-1">
                 arrow_right
               </span>
             </button>

@@ -52,7 +52,7 @@ const NavBar = () => {
       <Typography
         as="li"
         variant="small"
-        color="blue-gray"
+        color="white"
         className="p-1 font-bold text-xl"
       >
         <a href="/" className="flex items-center">
@@ -62,7 +62,7 @@ const NavBar = () => {
       <Typography
         as="li"
         variant="small"
-        color="blue-gray"
+        color="white"
         className="p-1 font-bold text-xl"
       >
         <a href="/whoweare" className="flex items-center">
@@ -72,7 +72,7 @@ const NavBar = () => {
       <Typography
         as="li"
         variant="small"
-        color="blue-gray"
+        color="white"
         className="p-1 font-bold text-xl"
       >
         <a href="/careers" className="flex items-center">
@@ -83,7 +83,7 @@ const NavBar = () => {
       <Typography
         as="li"
         variant="small"
-        color="blue-gray"
+        color="white"
         className="p-1 font-bold text-xl"
       >
         <a href="/ourbrands" className="flex items-center">
@@ -94,7 +94,7 @@ const NavBar = () => {
       <Typography
         as="li"
         variant="small"
-        color="blue-gray"
+        color="white"
         className="p-1 font-bold text-xl"
       >
         <a href="/contactus" className="flex items-center">
@@ -106,33 +106,33 @@ const NavBar = () => {
 
   return (
     <div
-      className={`max-h-[150px] w-full sticky backdrop-blur-md top-0 transition-all duration-200 ease-in-out z-50 ${
+      className={`max-h-[150px]  w-full sticky backdrop-blur-md top-0 transition-all duration-200 ease-in-out z-50 ${
         showNavBar ? "translate-y-0" : "-translate-y-full"
       }`}
     >
-      <Navbar className="py-0 bg-white/5 z-10 h-max max-w-full rounded-none px-4">
-        <div className="flex items-center justify-between xl:px-16 px-4 text-blue-gray-900 ">
+      <Navbar className="py-0 px-0 bg-[#0B3C89] z-10 h-max max-w-full rounded-none">
+        <div className="flex items-center text-blue-gray-900 ">
           <Typography
             as="a"
             href="/"
-            className="mr-4 cursor-pointer py-1.5 font-medium"
+            className="mr-4 cursor-pointer py-1.5 font-medium bg-white pl-12 pr-4 xl:order-0 order-1"
           >
             <img
               className={`w-40 lg:w-[259px] lg:h-[120px] ${
                 resizeLogo
                   ? "lg:w-[150px] lg:h-[80px]"
                   : "lg:w-[259px] lg:h-[120px]"
-              } transition-all duration-300`}
+              } transition-all duration-300 object-contain`}
               src={logo}
               alt=""
             />
           </Typography>
-          <div className="flex items-center gap-4">
-            <div className="mr-4 hidden xl:block">{navList}</div>
+          <div className="flex items-center gap-4 xl:order-1 order-0 md:px-12">
+            <div className="mr-4 hidden xl:block ">{navList}</div>
 
             <IconButton
               variant="text"
-              className="ml-auto h-6 w-6 text-inherit hover:bg-transparent focus:bg-transparent active:bg-transparent xl:hidden"
+              className="ml-auto h-6 w-6 text-inherit text-white hover:bg-transparent focus:bg-transparent active:bg-transparent xl:hidden"
               ripple={false}
               onClick={() => setOpenNav(!openNav)}
             >
