@@ -1,8 +1,8 @@
 import React from "react";
 import Banner from "../components/banner/Banner";
-import WhoWeAreCard from "../Components/whoweare/Card";
+import Card from "../Components/whoweare/Card";
 
-import ImgWithDetailsCard from "../components/common/Card";
+import CommonCard from "../components/common/Card";
 
 // icons
 import aspirations from "../assets/icons/aspirations.webp";
@@ -20,7 +20,7 @@ const Home = () => {
         <Banner img={desktopImage} />
       </div>
       <div className="flex justify-around flex-col lg:flex-row my-12">
-        <WhoWeAreCard
+        <Card
           color="blue"
           className="w-full mx-auto px-10"
           img={milestones}
@@ -36,7 +36,7 @@ const Home = () => {
         remains committed to innovation, quality, and empowering everyday lives
         through accessible, reliable technology."
         />
-        <WhoWeAreCard
+        <Card
           color="blue"
           className="w-full mx-auto px-10 "
           img={aspirations}
@@ -45,7 +45,7 @@ const Home = () => {
         />
       </div>
 
-      <ImgWithDetailsCard
+      <CommonCard
         src={karaokeImg}
         title="Karaoke Division"
         description="In 2010, Vismay International Corporation started distributing
@@ -56,7 +56,7 @@ const Home = () => {
         background="#06529B"
         color="white"
       />
-      <ImgWithDetailsCard
+      <CommonCard
         position={1}
         src={electronicsImg}
         title="Electronics Division"

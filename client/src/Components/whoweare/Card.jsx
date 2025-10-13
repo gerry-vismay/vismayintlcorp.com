@@ -6,7 +6,7 @@ const WhoWeAre = ({ img, title, description, color, className = "" }) => {
   if (color === "red") {
     titleColor = "text-red-500";
   } else if (color === "blue") {
-    titleColor = "text-[#07549C]";
+    titleColor = "text-[#0B3C89]";
   } else {
     titleColor = "text-black";
   }
@@ -27,7 +27,7 @@ const WhoWeAre = ({ img, title, description, color, className = "" }) => {
       >
         {title}
       </h2>
-      <p className="text-center text-xs xl:text-base leading-4 xl:leading-7">
+      <p className="text-[#333] text-center text-xs xl:text-base leading-4 xl:leading-7">
         {description}
       </p>
     </div>
