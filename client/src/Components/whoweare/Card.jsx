@@ -12,7 +12,7 @@ const WhoWeAre = ({ img, title, description, color, className = "" }) => {
   }
   return (
     <div
-      className={`flex flex-col items-center xl:w-[600px] ${className} pt-4 xl:pt-0`}
+      className={`flex flex-col items-center xl:w-[600px] ${className} py-4 xl:py-0`}
     >
       <div className="bg-[#E0E7FF] xl:w-[260px] xl:h-[210px] w-[160px] h-[110px] flex items-center justify-center ">
         <img
