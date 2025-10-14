@@ -6,9 +6,9 @@ function CareerDepartmentSection() {
       <div className="w-[102.5rem] h-[39rem] flex flex-row justify-around items-center">
         <div className="flex flex-col gap-15">
           <div>
-            <h1 className="text-3xl font-bold text-[#06529B] border-b-2 border-blue-400 pb-1 text-[48px] font-normal tracking-wider">
+            <h1 className="text-5xl text-[#06529B] border-b-2 border-blue-400 pb-1 font-normal tracking-wider">
               DIGITAL ONLINE <br />
-              <span className="font-bold bold text-[48px] tracking-normal text-[#06529B]">
+              <span className="font-bold bold text-5xl tracking-normal text-[#06529B]">
                 HR DEPARTMENT
               </span>
             </h1>

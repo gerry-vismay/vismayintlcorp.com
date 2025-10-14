@@ -7,7 +7,7 @@ function Careers() {
   return (
     <>
       <div>
-        <Banner img={CareersBanner} />
+        <Banner img={CareersBanner} alt="Career" />
         <CareerDepartmentSection />
       </div>
     </>
