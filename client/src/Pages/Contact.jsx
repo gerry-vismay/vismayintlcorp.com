@@ -1,16 +1,17 @@
 import React, { useEffect, useState } from "react";
 import emailjs from "emailjs-com";
 
-import desktopBannerContactUs from "../assets/images/banner/CONTACT_US.webp";
+import ContactUsBanner from "../assets/images/banner/CONTACT_US.webp";
 
 import Banner from "../components/banner/Banner";
+import GoogleMap from "../components/google-map/GoogleMap";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
     firstname: "",
     middlename: "",
     lastname: "",
-    jobtitle: "",
+    email: "",
     phone: "",
     message: "",
   });
@@ -40,7 +41,7 @@ const Contact = () => {
             firstname: "",
             middlename: "",
             lastname: "",
-            jobtitle: "",
+            email: "",
             phone: "",
             message: "",
           });
@@ -56,274 +57,150 @@ const Contact = () => {
     }, 10000); // 10 seconds
   };
 
-  const cssForm =
-    "h-[79px] !mt-6 first:!mt-0 !py-2 !px-4 leading-[100%] !mb-8 !text-xl font-medium  font-Inter font-sans-serif border-4 border-[#06529B] bg-[#06529B] text-white placeholder-white focus:outline-none focus:ring w-full";
+  const cssInput =
+    "bg-[#06529B] text-xs md:text-base text-white p-4 mb-5 rounded-md outline-none border-none focus:outline-[#06529B] placeholder-gray-300";
   return (
-    <section className="flex flex-col items-center min-h-screen bg-white ">
-      <Banner img={desktopBannerContactUs} />
-      <h2
-        className="w-[1062px] h-[77px] font-inter font-bold not-italic text-6xl !m-10 !mt-20 leading-[100%] text-center text-[#06529B]"
-        style={{
-          width: "1062px",
-          height: "77px",
-          fontFamily: "Inter, sans-serif",
-          fontWeight: 700,
-        }}
-      >
-        How would you like to contact us?
-      </h2>
+    <>
+      <Banner img={ContactUsBanner} />
+      <main className="max-w-screen-xl mx-auto py-16">
+        <h2 className="text-xl md:text-3xl lg:text-5xl xl:text-6xl text-[#06529B] text-center font-bold pb-12">
+          How would you like to contact us?
+        </h2>
 
-      <div className="flex flex-col items-center min-h-screen bg-white py-10">
-        {sent ? (
-          <div>
-            <p className="text-green-600">Your request has been sent!</p>
-            <p>Page will reload after 10 seconds...</p>
-          </div>
-        ) : (
-          <form
-            onSubmit={handleSubmit}
-            className="flex flex-row w-[1660px] p-8 mt-20 mx-auto gap-8 bg-white"
-          >
-            <div className="flex flex-col w-[698px]">
-              <input
-                type="text"
-                name="firstname"
-                id="first-name"
-                placeholder="First Name"
-                className={cssForm}
-                value={formData.firstname}
-                onChange={handleChange}
-                required
-              />
-              <input
-                type="text"
-                name="lastname"
-                id="last-name"
-                className={cssForm}
-                placeholder="Last Name"
-                value={formData.middlename}
-                onChange={handleChange}
-                required
-              />
-
-              <input
-                type="email"
-                name="email"
-                id="email"
-                placeholder="Email Address"
-                className={cssForm}
-                value={formData.lastname}
-                onChange={handleChange}
-                required
-              />
-              <input
-                type="text"
-                name="jobtitle"
-                id="job-title"
-                placeholder="Job Title"
-                className={cssForm}
-                value={formData.jobtitle}
-                onChange={handleChange}
-                required
-              />
-              <input
-                type="text"
-                name="phone"
-                id="mobile-number"
-                placeholder="Phone"
-                className={cssForm}
-                value={formData.phone}
-                onChange={handleChange}
-                required
-              />
+        <div className="flex flex-col gap-8 ">
+          {sent ? (
+            <div>
+              <p className="text-green-600">Your request has been sent!</p>
+              <p>Page will reload after 10 seconds...</p>
             </div>
+          ) : (
+            <form
+              onSubmit={handleSubmit}
+              className="flex flex-col lg:flex-row md:gap-8 gap-2 px-8"
+            >
+              {/* inputs */}
+              <div className="flex-1 flex flex-col ">
+                <input
+                  type="text"
+                  name="firstname"
+                  id="first-name"
+                  placeholder="First Name"
+                  className={cssInput}
+                  value={formData.firstname}
+                  onChange={handleChange}
+                  required
+                />
+                <input
+                  type="text"
+                  name="middlename"
+                  id="middle-name"
+                  className={cssInput}
+                  placeholder="Middle Name"
+                  value={formData.middlename}
+                  onChange={handleChange}
+                  required
+                />
 
-            <div className="w-[822px] h-[684px] bg-[#06529B] !p-4 box-border flex flex-col justify-between">
-              <span className="font-medium !font-inter !font-sans-serif !text-xl text-white !mb-2 leading-[100%]">
-                Your message (Optional)
-              </span>
-              <textarea
-                style={{
-                  backgroundColor: "#fff",
-                  width: "800px",
-                  height: "580px",
-                  alignSelf: "center",
-                  resize: "none",
-                  fontFamily: "Inter, sans-serif",
-                  fontWeight: 400,
-                  fontSize: "16px",
-                  padding: "10px",
-                  border: "none",
-                  outline: "none",
-                  color: "#000",
-                }}
-                name="message"
-                id="message"
-                // placeholder="Your Message (Optional)"
-                // className="border border-black px-4 py-2"
-                value={formData.message}
-                onChange={handleChange}
-                required
-              />
+                <input
+                  type="text"
+                  name="lastname"
+                  id="last-name"
+                  placeholder="Last Name"
+                  className={cssInput}
+                  value={formData.lastname}
+                  onChange={handleChange}
+                  required
+                />
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  placeholder="Email Address"
+                  className={cssInput}
+                  value={formData.email}
+                  onChange={handleChange}
+                  required
+                />
+                <input
+                  type="text"
+                  name="phone"
+                  id="mobile-number"
+                  placeholder="Phone"
+                  className={cssInput}
+                  value={formData.phone}
+                  onChange={handleChange}
+                  required
+                />
+              </div>
+              {/* message */}
+              <div className="flex-1 flex flex-col bg-[#06529B]  gap-y-2 rounded-lg ">
+                <span className="pl-4 pt-4 text-xs md:text-base  text-white">
+                  Your message (Optional)
+                </span>
+                <textarea
+                  className="resize-none mx-3 rounded-t-md outline-none focus:outline-white px-2 py-2 text-[#06529B]"
+                  rows="10"
+                  name="message"
+                  id="message"
+                  // placeholder="Your Message (Optional)"
+                  // className="border border-black px-4 py-2"
+                  value={formData.message}
+                  onChange={handleChange}
+                  required
+                />
 
-              <button
-                style={{
-                  width: "300px",
-                  height: "51px",
-                  backgroundColor: "white",
-                  color: "#06529B",
-                  fontFamily: "Inter, sans-serif",
-                  fontWeight: 500,
-                  fontSize: "24px",
-                  lineHeight: "100%",
-                  letterSpacing: "0%",
-                  border: "none",
-                  cursor: "pointer",
-                  alignSelf: "center",
-                  marginTop: "10px",
-                }}
-                type="submit"
-                // className="w-full bg-[#07549C] text-white py-2 px-4 rounded hover:bg-blue-600"
-              >
+                <button
+                  className="block mx-3 text-[#06529B] bg-white py-2 mb-2 rounded-b-md font-normal"
+                  type="submit"
+                  // className="w-full bg-[#07549C] text-white py-2 px-4 rounded hover:bg-blue-600"
+                >
+                  Send
+                </button>
+                {error && <p className="text-red-500 text-sm">{error}</p>}
+              </div>
+            </form>
+          )}
+
+          {/* Bottom Section */}
+          <div className="flex flex-col md:flex-row gap-8 px-8">
+            {/* Left Side: Chat With Us */}
+            <div className="flex-1 bg-[#06529B] text-white rounded-md pb-4 px-8">
+              {/* Top-left Label */}
+              <h2 className="text-base md:text-2xl py-4 ">Chat With Us</h2>
+
+              {/* Center Textarea */}
+              <p className="text-xs md:text-base font-normal mb-20">
+                Get product info, login help, and live chat with agent.
+              </p>
+
+              {/* Send Button */}
+              <button className="bg-white text-xs md:text-base text-[#06529B] px-8 py-2 rounded-md">
                 Send
               </button>
-              {error && <p className="text-red-500 text-sm">{error}</p>}
             </div>
-          </form>
-        )}
 
-        {/* Bottom Section */}
-        <div className="flex flex-row w-[1660px] p-8 !mt-16 !mb-16 mx-auto gap-8 bg-white">
-          {/* Left Side: Chat With Us */}
-          <div
-            style={{
-              width: "698px",
-              height: "250px",
-              backgroundColor: "#06529B",
-              padding: "20px",
-              boxSizing: "border-box",
-              display: "flex",
-              flexDirection: "column",
-              justifyContent: "space-between",
-            }}
-          >
-            {/* Top-left Label */}
-            <h3
-              style={{
-                fontFamily: "Inter, sans-serif",
-                fontWeight: 600,
-                fontStyle: "normal", // “Semi Bold” is just weight 600
-                fontSize: "32px",
-                lineHeight: "100%",
-                letterSpacing: "0%",
-                color: "white",
-                marginBottom: "10px",
-              }}
-            >
-              Chat With Us
-            </h3>
+            {/* Bot Right Side: Leave us some feedback */}
+            <div className="flex-1 bg-[#06529B] text-white rounded-md pb-4 px-8">
+              {/* Top-left Label */}
+              <h2 className="text-base md:text-2xl  py-4">
+                Leave us some feedback
+              </h2>
 
-            {/* Center Textarea */}
-            <h3
-              style={{
-                fontFamily: "Inter, sans-serif",
-                fontWeight: 500,
-                fontSize: "20px",
-                letterSpacing: "0%",
-                color: "white",
-              }}
-            >
-              Get product info, login help, and live chat with agent.
-            </h3>
+              {/* Center Textarea */}
+              <p className="text-xs md:text-base font-normal mb-20">
+                Let's Chat!
+              </p>
 
-            {/* Send Button */}
-            <button
-              style={{
-                width: "300px",
-                height: "51px",
-                backgroundColor: "white",
-                color: "#06529B",
-                fontFamily: "Inter, sans-serif",
-                fontWeight: 500,
-                fontSize: "24px",
-                lineHeight: "100%",
-                letterSpacing: "0%",
-                border: "none",
-                cursor: "pointer",
-                alignSelf: "center",
-                marginTop: "10px",
-              }}
-            >
-              Send
-            </button>
-          </div>
-
-          {/* Bot Right Side: Leave us some feedback */}
-          <div
-            style={{
-              width: "822px",
-              height: "250px",
-              backgroundColor: "#06529B",
-              padding: "20px",
-              boxSizing: "border-box",
-              display: "flex",
-              flexDirection: "column",
-              justifyContent: "space-between",
-            }}
-          >
-            {/* Top-left Label */}
-            <h3
-              style={{
-                fontFamily: "Inter, sans-serif",
-                fontWeight: 600,
-                fontStyle: "normal", // “Semi Bold” is just weight 600
-                fontSize: "32px",
-                lineHeight: "100%",
-                letterSpacing: "0%",
-                color: "white",
-                marginBottom: "10px",
-              }}
-            >
-              Leave us some feedback
-            </h3>
-
-            {/* Center Textarea */}
-            <h3
-              style={{
-                fontFamily: "Inter, sans-serif",
-                fontWeight: 500,
-                fontSize: "20px",
-                letterSpacing: "0%",
-                color: "white",
-              }}
-            >
-              Let's Chat!
-            </h3>
-
-            {/* Send Button */}
-            <button
-              style={{
-                width: "300px",
-                height: "51px",
-                backgroundColor: "white",
-                color: "#06529B",
-                fontFamily: "Inter, sans-serif",
-                fontWeight: 500,
-                fontSize: "24px",
-                lineHeight: "100%",
-                letterSpacing: "0%",
-                border: "none",
-                cursor: "pointer",
-                alignSelf: "center",
-                marginTop: "10px",
-              }}
-            >
-              Send Feedback
-            </button>
+              {/* Send Button */}
+              <button className="bg-white text-xs md:text-base text-[#06529B] px-8 py-2 rounded-md">
+                Send Feedback
+              </button>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+        <GoogleMap />
+      </main>
+    </>
   );
 };
 

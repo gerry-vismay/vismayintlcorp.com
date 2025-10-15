@@ -13,23 +13,24 @@ import desktopImage from "../assets/images/desktop-banner/webbanner.png";
 
 const Brands = () => {
   return (
-    <section>
+    <>
       <Banner img={desktopImage} />
+      <main className="max-w-screen-2xl mx-auto">
+        <StaticBanner
+          link="/ourbrands/platinumkaraoke"
+          desktopImage={desktopImgPK}
+          mobileImg={mobileImgPK}
+          label="Platinum karaoke"
+        />
 
-      <StaticBanner
-        link="/ourbrands/platinumkaraoke"
-        desktopImage={desktopImgPK}
-        mobileImg={mobileImgPK}
-        label="Platinum karaoke"
-      />
-
-      <StaticBanner
-        link="/ourbrands/laifen"
-        desktopImage={desktopImgLF}
-        mobileImg={mobileImgLF}
-        label="Laifen"
-      />
-    </section>
+        <StaticBanner
+          link="/ourbrands/laifen"
+          desktopImage={desktopImgLF}
+          mobileImg={mobileImgLF}
+          label="Laifen"
+        />
+      </main>
+    </>
   );
 };
 

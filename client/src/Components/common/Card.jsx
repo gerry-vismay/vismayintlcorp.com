@@ -7,6 +7,7 @@ const Card = ({
   position = 0,
   background = "",
   color = "",
+  className = "",
 }) => {
   let titleColor = "";
   if (color === "red") {
@@ -18,12 +19,12 @@ const Card = ({
   }
   return (
     <div
-      className={`bg-[${background}] flex justify-around items-center flex-col xl:flex-row px-4 pt-8 xl:pt-0`}
+      className={`bg-[${background}] flex justify-around items-center flex-col xl:flex-row px-4 pt-8 xl:pt-0 `}
     >
       <div
         className={`xl:w-[620px] ${
           color == "white" ? "text-white" : "text-[#06529B]"
-        } xl:order-${position} order-0 w-4/4 md:w-3/4`}
+        } xl:order-${position} order-0 w-4/4 md:w-3/4 `}
       >
         <h2 className="font-bold xl:text-6xl lg:text-4xl text-3xl text-center lg:text-left">
           {title}

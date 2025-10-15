@@ -15,17 +15,18 @@ import desktopImage from "../assets/images/banner/BANNERv2.webp";
 
 const Home = () => {
   return (
-    <main>
+    <>
       <div>
         <Banner img={desktopImage} />
       </div>
-      <div className="flex justify-around flex-col lg:flex-row my-12">
-        <Card
-          color="blue"
-          className="w-full mx-auto px-10"
-          img={milestones}
-          title="Milestones"
-          description="Founded in 2000, Vismay International Corporation began with a mission
+      <main className="">
+        <div className="max-w-screen-2xl mx-auto flex justify-around flex-col lg:flex-row my-12">
+          <Card
+            color="blue"
+            className="w-full mx-auto px-10"
+            img={milestones}
+            title="Milestones"
+            description="Founded in 2000, Vismay International Corporation began with a mission
         to make world-class technology accessible to Filipinos. Starting as a
         distributor of electronics and lifestyle products, the company quickly
         expanded its reach and offerings. In 2010, it opened its first retail
@@ -35,36 +36,38 @@ const Home = () => {
         across the country. Today, with over two decades of experience, Vismay
         remains committed to innovation, quality, and empowering everyday lives
         through accessible, reliable technology."
-        />
-        <Card
-          color="blue"
-          className="w-full mx-auto px-10 "
-          img={aspirations}
-          title="Aspirations"
-          description="At Vismay International Corporation, we aspire to be the foremost name in innovative lifestyle technology—bringing cutting-edge gadgets, entertainment, and digital experiences closer to every Filipino home. Fueled by passion and guided by excellence, we envision a future where access to world-class tech is not just a luxury, but a standard. We strive to lead with integrity, grow with purpose, and always put people first—because for us, progress means empowering lives through technology."
-        />
-      </div>
+          />
+          <Card
+            color="blue"
+            className="w-full mx-auto px-10 "
+            img={aspirations}
+            title="Aspirations"
+            description="At Vismay International Corporation, we aspire to be the foremost name in innovative lifestyle technology—bringing cutting-edge gadgets, entertainment, and digital experiences closer to every Filipino home. Fueled by passion and guided by excellence, we envision a future where access to world-class tech is not just a luxury, but a standard. We strive to lead with integrity, grow with purpose, and always put people first—because for us, progress means empowering lives through technology."
+          />
+        </div>
 
-      <CommonCard
-        src={karaokeImg}
-        title="Karaoke Division"
-        description="In 2010, Vismay International Corporation started distributing
+        <CommonCard
+          src={karaokeImg}
+          title="Karaoke Division"
+          description="In 2010, Vismay International Corporation started distributing
           Platinum Karaoke and introduced a collection of karaoke players with
           latest technology. This piloted a new era in the entertainment
           industry with Karaoke systems becoming a must in every Filipino
           Household."
-        background="#06529B"
-        color="white"
-      />
-      <CommonCard
-        position={1}
-        src={electronicsImg}
-        title="Electronics Division"
-        description="Electronics Division Vismay is an authorized distributor for
+          background="#06529B"
+          color="white"
+          className="max-w-screen-2xl mx-auto"
+        />
+        <CommonCard
+          position={1}
+          src={electronicsImg}
+          title="Electronics Division"
+          description="Electronics Division Vismay is an authorized distributor for
           prestigious brands of electronic products such as Symphony air cooler,
           strontium SD card, Mifa Bluetooth speaker, Adidas mobile cases etc."
-      />
-    </main>
+        />
+      </main>
+    </>
   );
 };
 

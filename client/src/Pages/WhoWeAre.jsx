@@ -5,8 +5,8 @@ import AboutUs from "../components/whoweare/AboutUs";
 function WhoWeAre() {
   return (
     <>
-      <div>
-        <Banner img={WhoWeAreBanner} alt="who we are" />
+      <Banner img={WhoWeAreBanner} alt="who we are" />
+      <div className="max-w-screen-2xl mx-auto ">
         <AboutUs />
       </div>
     </>
