@@ -20,11 +20,14 @@ const OurBrand = () => {
           </h2>
 
           <div className="w-full flex justify-center mb-12">
-            <SectionBanner img={pk} alt="Platinum Karaoke section Banner" />
+            <SectionBanner
+              link="https://platinumkaraoke.com/"
+              img={pk}
+              alt="Platinum Karaoke section Banner"
+            />
           </div>
         </div>
-
-        {/* Laifen Section */}
+        {/* Laifen Section
         <div className="mt-15">
           <h2 className="mb-10 mt-6 font-bold text-[#06529B] text-lg md:text-4xl leading-[1]">
             Laifen
@@ -33,7 +36,7 @@ const OurBrand = () => {
           <div className="w-full flex justify-center">
             <SectionBanner img={lf} alt="Laifen section Banner" />
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );

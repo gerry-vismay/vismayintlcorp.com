@@ -3,8 +3,8 @@ import backgroundImageDesktop from "../../assets/images/footer/FOOTER.webp";
 import backgroundImageMobile from "../../assets/images/footer/FOOTER_01.webp";
 import vismayLogo1 from "../../assets/images/footer/vismayLogo1.webp";
 import SPCLogo from "../../assets/images/footer/SPC.webp";
-import FBLogo from "../../assets/images/footer/LOGO_01.webp";
-import InLogo from "../../assets/images/footer/LOGO_02.webp";
+import InLogo from "../../assets/images/footer/LOGO_01.webp";
+import FBLogo from "../../assets/images/footer/LOGO_02.webp";
 import { useState, useEffect } from "react";
 
 function Footer() {
@@ -53,25 +53,29 @@ function Footer() {
                   Connect With Us
                 </li>
                 <div className="flex flex-row">
-                  <img
-                    className="w-[68px] h-[74px]"
-                    src={InLogo}
-                    alt="LinkedIn"
-                  />
-                  <img
-                    className="w-[68px] h-[74px]"
-                    src={FBLogo}
-                    alt="Facebook"
-                  />
+                  <a href="https://www.facebook.com/vismayinternationalcorp">
+                    <img
+                      className="w-[68px] h-[74px]"
+                      src={FBLogo}
+                      alt="Facebook Link"
+                    />
+                  </a>
+                  <a href="https://www.linkedin.com/company/vismay-international-corporation/">
+                    <img
+                      className="w-[68px] h-[74px]"
+                      src={InLogo}
+                      alt="LinkedIn Link"
+                    />
+                  </a>
                 </div>
               </div>
-              <li className="font-[700] text-[#fff] bold text-[20px] cursor-pointer">
+              <li className="font-[700] text-[#fff] bold text-[20px] ">
                 About Us
               </li>
-              <li className="font-[700] text-[#fff] bold text-[20px] cursor-pointer">
+              <li className="font-[700] text-[#fff] bold text-[20px] ">
                 Careers
               </li>
-              <li className="font-[700] text-[#fff] bold text-[20px] cursor-pointer">
+              <li className="font-[700] text-[#fff] bold text-[20px] ">
                 Our Brands
               </li>
             </ul>
