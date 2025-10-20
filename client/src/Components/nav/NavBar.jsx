@@ -48,7 +48,7 @@ const NavBar = () => {
   }, []);
 
   const navList = (
-    <ul className="mt-2 mb-4 flex flex-col gap-2 lg:mb-0 lg:mt-0 xl:flex-row xl:items-center xl:gap-6  ">
+    <ul className="w-full xl:border-t-[0px] border-t-[1px] px-4  mb-4 flex flex-col gap-2 lg:mb-0 lg:mt-0 xl:flex-row xl:items-center xl:gap-6  ">
       <Typography
         as="li"
         variant="small"
@@ -106,7 +106,7 @@ const NavBar = () => {
 
   return (
     <div
-      className={`max-h-[150px]  w-full sticky backdrop-blur-md top-0 transition-all duration-200 ease-in-out z-50 ${
+      className={`lg:max-h-[150px] max-h-[88px]  w-full sticky backdrop-blur-md top-0 transition-all duration-200 ease-in-out z-50 ${
         showNavBar ? "translate-y-0" : "-translate-y-full"
       }`}
     >
@@ -127,7 +127,7 @@ const NavBar = () => {
               alt=""
             />
           </Typography>
-          <div className="flex items-center gap-4 xl:order-1 order-0 md:px-12">
+          <div className="flex items-center gap-4 xl:order-1 order-0 px-4 md:px-8">
             <div className="mr-4 hidden xl:block ">{navList}</div>
 
             <IconButton
@@ -170,7 +170,9 @@ const NavBar = () => {
           </div>
         </div>
         <Collapse open={openNav}>
-          <div className="flex items-center ">{navList}</div>
+          <div className="flex h-[88vh]  bg-transparent backdrop-blur-md">
+            {navList}
+          </div>
         </Collapse>
       </Navbar>
     </div>

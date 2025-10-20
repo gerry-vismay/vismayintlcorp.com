@@ -32,7 +32,10 @@ function CareerDepartmentSection() {
             </ul>
           </div>
           <div className="flex items-center md:flex-row flex-col gap-4 text-xs md:text-base">
-            <a href="https://ph.jobstreet.com/vismay-international-corp-jobs">
+            <a
+              href="https://ph.jobstreet.com/vismay-international-corp-jobs"
+              target="_blank"
+            >
               <button className="flex items-center justify-center rounded-full text-white bg-[#0872d7] border-2 border-[#0872d7] hover:bg-[#085eaf] hover:ring-2 md:px-8 py-2 tracking-tight w-[190px] cursor-pointer">
                 Jobstreet
                 <span className="material-symbols-outlined mt-1">
@@ -40,7 +43,10 @@ function CareerDepartmentSection() {
                 </span>
               </button>
             </a>
-            <a href="https://ph.indeed.com/cmp/Xtremeway-Corporation/jobs">
+            <a
+              href="https://ph.indeed.com/cmp/Xtremeway-Corporation/jobs"
+              target="_blank"
+            >
               <button className="flex items-center justify-center rounded-full bg-white text-[#0872d7] border-2 border-[#0872d7] hover:text-[#085eaf] hover:ring-2  px-8 py-2 tracking-tight w-[190px] cursor-pointer">
                 Indeed
                 <span className="material-symbols-outlined mt-1">
@@ -48,7 +54,10 @@ function CareerDepartmentSection() {
                 </span>
               </button>
             </a>
-            <a href="https://www.facebook.com/vismayinternationalcorp">
+            <a
+              href="https://www.facebook.com/vismayinternationalcorp"
+              target="_blank"
+            >
               <button className="flex items-center justify-center rounded-full text-white bg-[#0872d7] border-2 border-[#0872d7] hover:bg-[#085eaf] hover:ring-2 px-8 py-2 tracking-tight w-[190px] cursor-pointer">
                 Facebook
                 <span className="material-symbols-outlined mt-1">
@@ -59,7 +68,7 @@ function CareerDepartmentSection() {
           </div>
         </div>
         <div className="order-0 xl:order-1 h-[336px] md:h-[636px] w-[328px] md:w-[628px] bg-[#0872d7] flex items-center justify-center rounded-[3px]">
-          <div className="">
+          <div >
             <img
               src={HRDepartmentLogo}
               alt="HR Department"
