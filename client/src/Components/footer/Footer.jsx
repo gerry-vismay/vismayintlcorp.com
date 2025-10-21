@@ -52,7 +52,7 @@ function Footer() {
                 <li className="font-[700] text-[#fff] bold text-[20px] cursor-pointer">
                   Connect With Us
                 </li>
-                <div className="flex flex-row">
+                <div className="flex flex-row justify-center md:justify-start">
                   <a href="https://www.facebook.com/vismayinternationalcorp">
                     <img
                       className="w-[68px] h-[74px]"
