@@ -1,6 +1,11 @@
+# Prevent directory listing
 Options -Indexes
+
+# Enable URL rewriting
 RewriteEngine On
 RewriteBase /vismayintlcorp/
+
+# React SPA support (redirect all to index.html)
 RewriteRule ^index\.html$ - [L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
