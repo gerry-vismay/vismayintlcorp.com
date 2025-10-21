@@ -9,6 +9,7 @@ lerna-debug.log*
 dist
 node_modules
 *.local
+client/dist/
 
 # Editor directories and files
 .vscode/*
